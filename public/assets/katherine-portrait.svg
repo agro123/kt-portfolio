@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="figure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#134E4A"/>
+    </linearGradient>
+    <pattern id="lattice" width="97" height="168" patternUnits="userSpaceOnUse">
+      <path d="M48.500 0 97 28v56l-48.500 28L0 84V28zM48.500 112v56" fill="none" stroke="#0F766E" stroke-opacity=".14" stroke-width="2"/>
+      <circle cx="48.5" cy="112" r="4" fill="#0D9488" fill-opacity=".3"/>
+    </pattern>
+    <clipPath id="frame"><rect width="800" height="1000"/></clipPath>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#lattice)"/>
+  <g clip-path="url(#frame)">
+    <circle cx="400" cy="420" r="250" fill="#FFFFFF" fill-opacity=".45"/>
+    <!-- hair -->
+    <path d="M268 430c-18-150 44-250 136-250s152 96 134 250c-6 60-10 128 14 190H250c26-62 24-130 18-190z" fill="#134E4A"/>
+    <!-- neck -->
+    <path d="M352 520h96v110c0 30-22 52-48 52s-48-22-48-52z" fill="#99F6E4"/>
+    <!-- face -->
+    <ellipse cx="400" cy="400" rx="104" ry="132" fill="#CCFBF1"/>
+    <path d="M296 380c10-90 70-130 124-124 50 6 84 50 86 110-40-10-80-40-104-80-20 46-60 80-106 94z" fill="#134E4A"/>
+    <!-- shoulders / lab coat -->
+    <path d="M110 1000c0-190 100-300 242-330l48 70 48-70c142 30 242 140 242 330z" fill="url(#figure)"/>
+    <path d="M352 670l48 70 48-70 34 12-82 170-82-170z" fill="#F8FAFC"/>
+    <path d="M400 740v260" stroke="#F8FAFC" stroke-opacity=".35" stroke-width="3"/>
+  </g>
+  <g fill="none" stroke="#0F766E" stroke-width="3" stroke-opacity=".6">
+    <path d="M40 90V40h50M760 910v50h-50"/>
+  </g>
+</svg>

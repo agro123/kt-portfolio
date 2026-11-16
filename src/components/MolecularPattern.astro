@@ -1,0 +1,25 @@
+---
+// Subtle hexagonal (benzene-ring) lattice used as a decorative section background.
+interface Props {
+  id: string;
+  class?: string;
+}
+const { id, class: className } = Astro.props;
+---
+
+<svg class:list={['pointer-events-none absolute', className]} aria-hidden="true" width="100%" height="100%">
+  <defs>
+    <pattern id={id} width="48.5" height="84" patternUnits="userSpaceOnUse">
+      <path
+        d="M24.25 0 48.5 14v28L24.250 56 0 42V14zM24.250 56v28"
+        fill="none"
+        stroke="var(--line)"
+        stroke-width="1"
+      ></path>
+      <circle cx="24.25" cy="56" r="2" fill="var(--accent)" opacity="0.55"></circle>
+      <circle cx="0" cy="14" r="1.5" fill="var(--line)"></circle>
+      <circle cx="48.5" cy="14" r="1.5" fill="var(--line)"></circle>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill={`url(#${id})`}></rect>
+</svg>

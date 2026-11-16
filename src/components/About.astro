@@ -1,0 +1,45 @@
+---
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+import { formatDate, type Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { about, ui, meta } = Astro.props.t;
+---
+
+<section id="about" class="py-20 sm:py-24">
+  <div class="container-page grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+    <div>
+      <SectionHeading eyebrow={about.eyebrow} title={about.title} />
+      <div class="mt-6 space-y-4">
+        {about.bio.map((paragraph) => <p class="text-base leading-relaxed text-muted">{paragraph}</p>)}
+      </div>
+    </div>
+
+    <aside class="card h-fit p-6 sm:p-7">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h3 class="flex items-center gap-2 font-display text-lg font-bold text-ink">
+          <span class="grid size-8 place-items-center rounded-lg bg-accent-soft text-accent-text">
+            <Icon name="pulse" class="size-4" />
+          </span>
+          {about.now.title}
+        </h3>
+        <p class="font-mono text-[11px] text-muted">
+          {ui.lastUpdated}: <time datetime={about.now.updated} class="text-ink">{formatDate(about.now.updated, meta.dateLocale)}</time>
+        </p>
+      </div>
+      <ul class="m-0 mt-5 list-none space-y-3 p-0">
+        {
+          about.now.items.map((item) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-ink">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+  </div>
+</section>

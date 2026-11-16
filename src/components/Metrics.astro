@@ -1,0 +1,69 @@
+---
+import MolecularPattern from './MolecularPattern.astro';
+import SectionHeading from './SectionHeading.astro';
+import type { Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { metrics } = Astro.props.t;
+
+// Asymmetric bento layout: the first metric is the hero tile.
+const tiles = [
+  { cell: 'sm:col-span-2 lg:row-span-2', value: 'text-7xl sm:text-8xl lg:text-9xl' },
+  { cell: 'sm:col-span-2', value: 'text-5xl sm:text-6xl' },
+  { cell: '', value: 'text-5xl' },
+  { cell: '', value: 'text-5xl' },
+];
+---
+
+<section id="impact" class="border-y border-line bg-surface py-20 sm:py-24">
+  <div class="container-page">
+    <SectionHeading eyebrow={metrics.eyebrow} title={metrics.title} />
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        metrics.items.map((item, i) => {
+          const tile = tiles[i] ?? tiles[tiles.length - 1];
+          return (
+            <div
+              class:list={[
+                'relative flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bg p-6',
+                tile.cell,
+              ]}
+            >
+              {i === 0 && (
+                <MolecularPattern
+                  id="bento-lattice"
+                  class="inset-0 opacity-80 [mask-image:linear-gradient(to_bottom_left,black,transparent_60%)]"
+                />
+              )}
+              <p class:list={['relative font-mono font-semibold leading-none tracking-tighter', tile.value, i === 0 ? 'text-accent-text' : 'text-ink']}>
+                {item.value}
+              </p>
+              <div class="relative mt-6">
+                <p class="font-display text-base font-bold text-ink">{item.label}</p>
+                <p class="mt-1 text-sm leading-relaxed text-muted">{item.note}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+
+      <div class="rounded-2xl border border-line bg-bg p-6 sm:col-span-2 lg:col-span-4">
+        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">{metrics.institutionsLabel}</p>
+        <ul class="m-0 mt-4 flex list-none flex-wrap items-center gap-x-8 gap-y-3 p-0">
+          {
+            metrics.institutions.map((name) => (
+              <li class="flex items-center gap-2 font-display text-sm font-semibold tracking-tight text-muted">
+                <svg viewBox="0 0 16 16" class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M8 1.500 13.600 4.750v6.500L8 14.500l-5.600-3.250v-6.500z" />
+                </svg>
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens — light is the default, .dark on <html> swaps the palette. */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-solid: #ffffff;
+  --line: #e2e8f0;
+  --ink: #0f172a;
+  --muted: #475569;
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --accent-text: #0f766e;
+  --accent-soft: #f0fdfa;
+  --on-accent: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0b0f19;
+  --surface: rgb(17 24 39 / 0.78);
+  --surface-solid: #111827;
+  --line: #1f2937;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-text: #2dd4bf;
+  --accent-soft: rgb(45 212 191 / 0.09);
+  --on-accent: #042f2e;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-solid: var(--surface-solid);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-on-accent hover:bg-accent-hover;
+  }
+
+  .btn-ghost {
+    @apply border border-line bg-surface text-ink hover:border-accent hover:text-accent-text;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-text;
+  }
+
+  .chip {
+    @apply cursor-pointer rounded-full border border-line bg-surface px-3.5 py-1.5 text-xs font-medium text-muted transition-colors hover:border-accent hover:text-ink;
+  }
+
+  .chip[aria-pressed="true"] {
+    @apply border-ink bg-ink text-bg;
+  }
+
+  .tag {
+    @apply rounded-md border border-line px-2 py-0.5 font-mono text-[11px] text-muted;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-line bg-bg px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25;
+  }
+
+  /* Uniform action bar: [DOI] [PDF] [Code] [Data] [Demo] */
+  .ref-link {
+    @apply font-mono text-xs font-medium text-accent-text underline-offset-4 hover:underline;
+  }
+
+  .ref-link::before {
+    content: "[";
+    @apply text-muted;
+  }
+
+  .ref-link::after {
+    content: "]";
+    @apply text-muted;
+  }
+
+  .ref-link[aria-disabled="true"] {
+    @apply cursor-not-allowed text-muted/50 no-underline;
+  }
+
+  .ref-link[aria-disabled="true"]::before,
+  .ref-link[aria-disabled="true"]::after {
+    @apply text-muted/40;
+  }
+}

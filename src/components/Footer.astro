@@ -1,0 +1,46 @@
+---
+import Icon from './Icon.astro';
+import type { Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { site, footer, hero, ui } = Astro.props.t;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-line bg-surface">
+  <div class="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <p class="font-display text-sm font-bold text-ink">
+        {site.name}<span class="font-mono text-xs font-medium text-accent-text">, {site.credential}</span>
+      </p>
+      <p class="mt-1 text-sm text-muted">{footer.tagline}</p>
+      <p class="mt-3 font-mono text-[11px] text-muted">© {year} {site.name}. {footer.rights}</p>
+    </div>
+    <div class="flex items-center gap-2">
+      {
+        hero.profiles.map((profile) => (
+          <a
+            href={profile.url}
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label={profile.label}
+            title={profile.label}
+            class="grid size-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent hover:text-accent-text"
+          >
+            <Icon name={profile.icon} class="size-4" />
+          </a>
+        ))
+      }
+      <a
+        href="#top"
+        aria-label={ui.backToTop}
+        title={ui.backToTop}
+        class="ml-2 grid size-9 place-items-center rounded-full bg-ink text-bg transition-opacity hover:opacity-80"
+      >
+        <Icon name="arrow-up" class="size-4" />
+      </a>
+    </div>
+  </div>
+</footer>

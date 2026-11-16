@@ -1,0 +1,95 @@
+---
+import Icon from './Icon.astro';
+import MolecularPattern from './MolecularPattern.astro';
+import { url, type Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { hero } = Astro.props.t;
+---
+
+<section class="relative overflow-hidden border-b border-line">
+  <MolecularPattern
+    id="hero-lattice"
+    class="inset-0 opacity-70 [mask-image:radial-gradient(60%_70%_at_85%_20%,black,transparent)]"
+  />
+  <div class="container-page relative grid items-center gap-14 pb-20 pt-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16 lg:pb-28 lg:pt-20">
+    <div>
+      <p class="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-xs font-medium text-muted">
+        <span class="relative flex size-2">
+          <span class="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60"></span>
+          <span class="relative inline-flex size-2 rounded-full bg-accent"></span>
+        </span>
+        {hero.badge}
+      </p>
+
+      <h1 class="mt-6 font-display text-[2.35rem] font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.35rem]">
+        {hero.headline}{' '}
+        <span class="text-accent-text">{hero.headlineAccent}</span>
+      </h1>
+
+      <p class="mt-6 font-mono text-[13px] text-accent-text">{hero.subtitle}</p>
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-muted">{hero.summary}</p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={url(hero.ctaPrimary.href)} class="btn btn-primary">
+          {hero.ctaPrimary.label}
+          <Icon name="arrow-right" class="size-4" />
+        </a>
+        <a href={url(hero.ctaSecondary.href)} class="btn btn-ghost" download>
+          <Icon name="download" class="size-4" />
+          {hero.ctaSecondary.label}
+        </a>
+      </div>
+
+      <div class="mt-10 border-t border-line pt-5">
+        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">{hero.profilesLabel}</p>
+        <ul class="m-0 mt-3 flex list-none flex-wrap gap-x-5 gap-y-2 p-0">
+          {
+            hero.profiles.map((profile) => (
+              <li>
+                <a
+                  href={profile.url}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-accent-text"
+                >
+                  <Icon name={profile.icon} class="size-[18px]" />
+                  {profile.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-sm lg:max-w-none">
+      <figure class="relative m-0">
+        <span class="absolute -right-2 -top-2 size-8 border-r-2 border-t-2 border-accent" aria-hidden="true"></span>
+        <span class="absolute -bottom-2 -left-2 size-8 border-b-2 border-l-2 border-accent" aria-hidden="true"></span>
+        <img
+          src={url(hero.portrait.src)}
+          alt={hero.portrait.alt}
+          width="800"
+          height="1000"
+          fetchpriority="high"
+          decoding="async"
+          class="aspect-[4/5] w-full rounded-2xl border border-line bg-surface object-cover"
+        />
+        <figcaption class="absolute right-3 top-3 rounded-full border border-line bg-surface-solid/90 px-3 py-1 font-mono text-[11px] text-muted backdrop-blur">
+          {hero.portrait.caption}
+        </figcaption>
+      </figure>
+
+      <div class="card absolute -bottom-8 left-3 w-56 bg-surface-solid p-4 shadow-xl shadow-slate-900/10 sm:-left-8">
+        <p class="font-mono text-4xl font-semibold tracking-tight text-ink">
+          {hero.kpi.value}<span class="ml-1.5 text-sm font-medium text-accent-text">{hero.kpi.unit}</span>
+        </p>
+        <p class="mt-1 text-sm font-medium text-ink">{hero.kpi.label}</p>
+        <p class="mt-0.5 font-mono text-[11px] text-muted">{hero.kpi.note}</p>
+      </div>
+    </div>
+  </div>
+</section>

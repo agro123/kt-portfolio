@@ -1,0 +1,27 @@
+---
+import { url, type Content } from '../i18n';
+
+interface Props {
+  lang: string;
+  t: Content;
+}
+const { lang, t } = Astro.props;
+---
+
+<nav aria-label={t.ui.languageSwitcher} class="flex items-center rounded-full border border-line bg-surface p-0.5 font-mono text-xs">
+  {
+    t.languages.map((l) => (
+      <a
+        href={url(`${l.code}/`)}
+        hreflang={l.code}
+        lang={l.code}
+        data-lang-link={l.code}
+        aria-label={l.name}
+        aria-current={l.code === lang ? 'true' : undefined}
+        class="rounded-full px-2.5 py-1 font-medium text-muted transition-colors hover:text-ink aria-[current=true]:bg-ink aria-[current=true]:text-bg"
+      >
+        {l.label}
+      </a>
+    ))
+  }
+</nav>

@@ -1,0 +1,469 @@
+# Pages CMS configuration — https://pagescms.org
+# Lets non-technical editors change every text, image and PDF of the site from
+# https://app.pagescms.org without touching code.
+#
+# The field tree is defined once (anchor &fields on the English file) and reused
+# for Spanish and French, so the three editors always have the same shape.
+
+media:
+  input: public/assets
+  output: assets
+  extensions: [jpg, jpeg, png, webp, svg, pdf]
+
+content:
+  - name: en
+    label: "🇬🇧 English"
+    type: file
+    path: src/data/en.json
+    format: json
+    fields: &fields
+      - name: meta
+        label: SEO y metadatos
+        type: object
+        fields:
+          - { name: title, label: Título de la pestaña del navegador, type: string }
+          - { name: description, label: Descripción para Google (máx. 160 caracteres), type: text }
+          - { name: keywords, label: Palabras clave (separadas por comas), type: string }
+          - { name: dateLocale, label: "Formato de fecha (en-GB, es-CO, fr-FR)", type: string }
+          - { name: ogLocale, label: "Idioma para redes sociales (en_GB, es_CO, fr_FR)", type: string }
+          - { name: ogImage, label: Imagen para compartir en redes (JPG 1200×630; opcional), type: image }
+
+      - name: site
+        label: Datos generales
+        type: object
+        fields:
+          - { name: name, label: Nombre, type: string }
+          - { name: credential, label: Título (PhD), type: string }
+          - { name: jobTitle, label: Cargo actual, type: string }
+          - { name: email, label: Correo de contacto, type: string }
+          - name: sampleNotice
+            label: Aviso de contenido de ejemplo
+            description: Franja superior del sitio. Déjelo vacío cuando todo el contenido sea real.
+            type: text
+
+      - name: languages
+        label: Idiomas (no modificar)
+        type: object
+        list: true
+        fields:
+          - { name: code, label: Código, type: string }
+          - { name: label, label: Etiqueta corta, type: string }
+          - { name: name, label: Nombre, type: string }
+
+      - name: ui
+        label: Textos de la interfaz
+        type: object
+        fields:
+          - { name: skipToContent, label: Saltar al contenido, type: string }
+          - { name: mainNav, label: Navegación principal, type: string }
+          - { name: menu, label: Menú, type: string }
+          - { name: languageSwitcher, label: Selector de idioma, type: string }
+          - { name: themeToggle, label: Botón de tema claro/oscuro, type: string }
+          - { name: close, label: Cerrar, type: string }
+          - { name: years, label: Abreviatura de años, type: string }
+          - { name: proficiency, label: "Nivel de dominio (conserve {level} y {max})", type: string }
+          - { name: lastUpdated, label: Última actualización, type: string }
+          - { name: copyEmail, label: Copiar correo, type: string }
+          - { name: copied, label: Copiado, type: string }
+          - { name: noResults, label: Sin resultados, type: string }
+          - { name: backToTop, label: Volver arriba, type: string }
+          - { name: redirecting, label: Redirigiendo, type: string }
+          - { name: unavailable, label: No disponible, type: string }
+          - name: links
+            label: Nombres de los enlaces
+            type: object
+            fields:
+              - { name: doi, label: DOI, type: string }
+              - { name: pdf, label: PDF, type: string }
+              - { name: code, label: Código, type: string }
+              - { name: data, label: Datos, type: string }
+              - { name: demo, label: Demo, type: string }
+
+      - name: nav
+        label: Menú superior
+        type: object
+        fields:
+          - name: links
+            label: Enlaces (máximo 5)
+            type: object
+            list: true
+            fields:
+              - { name: id, label: Sección de destino (no modificar), type: string }
+              - { name: label, label: Texto, type: string }
+          - name: cta
+            label: Botón principal
+            type: object
+            fields:
+              - { name: label, label: Texto, type: string }
+              - { name: href, label: Destino, type: string }
+
+      - name: hero
+        label: Portada
+        type: object
+        fields:
+          - { name: badge, label: Etiqueta de disponibilidad, type: string }
+          - { name: headline, label: Titular (primera parte), type: string }
+          - { name: headlineAccent, label: Titular (parte resaltada en color), type: string }
+          - { name: subtitle, label: Subtítulo, type: string }
+          - { name: summary, label: Resumen ejecutivo (3 líneas), type: text }
+          - name: ctaPrimary
+            label: Botón principal
+            type: object
+            fields:
+              - { name: label, label: Texto, type: string }
+              - { name: href, label: Destino, type: string }
+          - name: ctaSecondary
+            label: Botón secundario (descarga del CV)
+            type: object
+            fields:
+              - { name: label, label: Texto, type: string }
+              - { name: href, label: Archivo PDF, type: file }
+          - { name: profilesLabel, label: Título de la barra de perfiles, type: string }
+          - name: profiles
+            label: Perfiles científicos
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icono
+                type: select
+                options: { values: [orcid, scholar, pubmed, linkedin, github] }
+              - { name: label, label: Nombre, type: string }
+              - { name: url, label: Enlace completo (https://…), type: string }
+          - name: portrait
+            label: Retrato
+            type: object
+            fields:
+              - { name: src, label: Foto (vertical 4:5; recomendado 800×1000 px), type: image }
+              - { name: alt, label: Descripción de la foto (accesibilidad), type: string }
+              - { name: caption, label: Etiqueta sobre la foto, type: string }
+          - name: kpi
+            label: Tarjeta flotante con indicador
+            type: object
+            fields:
+              - { name: value, label: Valor, type: string }
+              - { name: unit, label: Unidad, type: string }
+              - { name: label, label: Descripción, type: string }
+              - { name: note, label: Nota, type: string }
+
+      - name: pillars
+        label: Capacidades
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - { name: applicationsLabel, label: Título de la lista de aplicaciones, type: string }
+          - name: items
+            label: Tarjetas (3 o 4)
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icono
+                type: select
+                options: { values: [biomarker, assay, omics, leadership, microscope, chart, shield, briefcase, consulting, consortium] }
+              - { name: title, label: Título, type: string }
+              - { name: description, label: Descripción, type: text }
+              - { name: applications, label: Aplicaciones industriales, type: string, list: true }
+
+      - name: metrics
+        label: Cifras clave
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - name: items
+            label: Indicadores (4; el primero es el más grande)
+            type: object
+            list: true
+            fields:
+              - { name: value, label: Valor, type: string }
+              - { name: label, label: Qué mide, type: string }
+              - { name: note, label: Nota, type: text }
+          - { name: institutionsLabel, label: Título de la barra de instituciones, type: string }
+          - { name: institutions, label: Instituciones colaboradoras, type: string, list: true }
+
+      - name: projects
+        label: Proyectos de I+D
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - { name: filterLabel, label: Descripción del filtro (accesibilidad), type: string }
+          - name: filters
+            label: Filtros
+            type: object
+            list: true
+            fields:
+              - { name: id, label: "Identificador (vacío = «Todos»)", type: string }
+              - { name: label, label: Texto, type: string }
+          - name: labels
+            label: Etiquetas fijas
+            type: object
+            fields:
+              - { name: problem, label: Problema, type: string }
+              - { name: method, label: Metodología y rol, type: string }
+              - { name: impact, label: Impacto, type: string }
+              - { name: role, label: Mi rol, type: string }
+              - { name: viewCase, label: Botón «Ver caso», type: string }
+              - { name: workflow, label: Flujo de trabajo, type: string }
+              - { name: ndaBadge, label: Insignia NDA, type: string }
+              - { name: ndaNote, label: Nota de confidencialidad, type: text }
+          - name: items
+            label: Proyectos
+            type: object
+            list: true
+            fields:
+              - { name: id, label: "Identificador único (minúsculas-con-guiones; igual en los 3 idiomas)", type: string }
+              - { name: category, label: Categoría (identificador de un filtro), type: string }
+              - { name: year, label: Años, type: string }
+              - { name: title, label: Título, type: string }
+              - { name: summary, label: Resumen de una línea, type: text }
+              - name: abstract
+                label: Resumen gráfico (4 pasos)
+                type: object
+                list: true
+                fields:
+                  - name: glyph
+                    label: Dibujo
+                    type: select
+                    options: { values: [sample, dna, plate, chart, cell, molecule, network, target, shield, clinic, organoid, chip] }
+                  - { name: label, label: Texto corto, type: string }
+              - { name: problem, label: Problema / Reto, type: text }
+              - { name: method, label: Metodología, type: text }
+              - { name: role, label: Mi rol, type: text }
+              - { name: impact, label: Impacto cuantificado, type: text }
+              - name: metrics
+                label: Cifras destacadas (3)
+                type: object
+                list: true
+                fields:
+                  - { name: value, label: Valor, type: string }
+                  - { name: label, label: Qué mide, type: string }
+              - { name: tags, label: Etiquetas técnicas, type: string, list: true }
+              - { name: nda, label: Proyecto bajo NDA, type: boolean }
+              - name: links
+                label: Enlaces (vacío = no disponible)
+                type: object
+                fields:
+                  - { name: doi, label: DOI, type: string }
+                  - { name: pdf, label: PDF, type: string }
+                  - { name: code, label: Código, type: string }
+                  - { name: data, label: Datos, type: string }
+                  - { name: demo, label: Demo, type: string }
+
+      - name: stack
+        label: Stack técnico
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - name: categories
+            label: Categorías (3)
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icono
+                type: select
+                options: { values: [microscope, chart, shield, biomarker, assay, omics, leadership] }
+              - { name: title, label: Título, type: string }
+              - name: skills
+                label: Competencias
+                type: object
+                list: true
+                fields:
+                  - { name: name, label: Nombre, type: string }
+                  - { name: years, label: Años de experiencia, type: number }
+                  - { name: level, label: Nivel de dominio (1 a 5), type: number, options: { min: 1, max: 5 } }
+
+      - name: ip
+        label: Patentes y propiedad intelectual
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - { name: impactLabel, label: Título del impacto, type: string }
+          - name: items
+            label: Patentes / activos
+            type: object
+            list: true
+            fields:
+              - { name: code, label: Código o número, type: string }
+              - { name: status, label: Estado legal (texto visible), type: string }
+              - name: statusType
+                label: Tipo de estado (define el color)
+                type: select
+                options: { values: [granted, licensed, pending] }
+              - { name: year, label: Año, type: string }
+              - { name: title, label: Título, type: string }
+              - { name: impact, label: Impacto comercial / clínico, type: text }
+
+      - name: publications
+        label: Publicaciones
+        type: object
+        fields:
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - { name: trackLabel, label: Etiqueta del filtro por línea, type: string }
+          - { name: yearLabel, label: Etiqueta del filtro por año, type: string }
+          - { name: allTracks, label: Texto «Todas las líneas», type: string }
+          - { name: allYears, label: Texto «Todos los años», type: string }
+          - { name: tldrLabel, label: Título del resumen ejecutivo, type: string }
+          - name: tracks
+            label: Líneas de investigación
+            type: object
+            list: true
+            fields:
+              - { name: id, label: Identificador, type: string }
+              - { name: label, label: Texto, type: string }
+          - name: items
+            label: Publicaciones (la más reciente primero)
+            type: object
+            list: true
+            fields:
+              - { name: year, label: Año, type: string }
+              - { name: track, label: Línea (identificador), type: string }
+              - { name: authorship, label: Posición de autoría, type: string }
+              - { name: title, label: Título del artículo, type: text }
+              - { name: authors, label: Autores, type: string }
+              - { name: journal, label: Revista, type: string }
+              - { name: tldr, label: Resumen ejecutivo (2 líneas, sin jerga), type: text }
+              - name: links
+                label: Enlaces (vacío = no disponible)
+                type: object
+                fields:
+                  - { name: pdf, label: PDF, type: string }
+                  - { name: code, label: Código, type: string }
+                  - { name: data, label: Datos, type: string }
+                  - { name: doi, label: DOI, type: string }
+
+      - name: career
+        label: Trayectoria
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: experienceTitle, label: Título de experiencia, type: string }
+          - { name: educationTitle, label: Título de formación, type: string }
+          - name: items
+            label: Experiencia (la más reciente primero)
+            type: object
+            list: true
+            fields:
+              - { name: period, label: Periodo, type: string }
+              - { name: role, label: Cargo, type: string }
+              - { name: org, label: Institución, type: string }
+              - { name: summary, label: Resumen, type: text }
+          - name: education
+            label: Formación
+            type: object
+            list: true
+            fields:
+              - { name: year, label: Año, type: string }
+              - { name: degree, label: Título obtenido, type: string }
+              - { name: org, label: Institución, type: string }
+
+      - name: about
+        label: Perfil y bloque «Ahora»
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: bio, label: Biografía (párrafos), type: text, list: true }
+          - name: now
+            label: Bloque «Ahora»
+            type: object
+            fields:
+              - { name: title, label: Título, type: string }
+              - { name: updated, label: Fecha de última actualización, type: date }
+              - { name: items, label: Actividades actuales, type: text, list: true }
+
+      - name: cv
+        label: Descarga de CV
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - name: items
+            label: Tarjetas de CV (2)
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icono
+                type: select
+                options: { values: [briefcase, scholar] }
+              - { name: title, label: Título, type: string }
+              - { name: description, label: Descripción, type: text }
+              - { name: meta, label: Formato y extensión, type: string }
+              - { name: file, label: Archivo PDF, type: file }
+              - { name: cta, label: Texto del botón, type: string }
+
+      - name: contact
+        label: Contacto
+        type: object
+        fields:
+          - { name: eyebrow, label: Antetítulo, type: string }
+          - { name: title, label: Título, type: string }
+          - { name: intro, label: Introducción, type: text }
+          - { name: availabilityLabel, label: Título de disponibilidad, type: string }
+          - name: availability
+            label: Tarjetas de disponibilidad
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icono
+                type: select
+                options: { values: [briefcase, consulting, consortium, leadership] }
+              - { name: title, label: Título, type: string }
+              - { name: description, label: Descripción, type: text }
+          - { name: emailLabel, label: Título del correo, type: string }
+          - name: form
+            label: Formulario
+            type: object
+            fields:
+              - name: endpoint
+                label: Dirección del servicio (Formspree o Web3Forms)
+                description: "Ejemplo: https://formspree.io/f/abcdwxyz o https://api.web3forms.com/submit. Vacío = el formulario abre el programa de correo."
+                type: string
+              - { name: accessKey, label: Clave de acceso (solo Web3Forms), type: string }
+              - { name: title, label: Título, type: string }
+              - { name: name, label: Campo nombre, type: string }
+              - { name: email, label: Campo correo, type: string }
+              - { name: organization, label: Campo organización, type: string }
+              - { name: topic, label: Campo tema, type: string }
+              - { name: topics, label: Opciones de tema, type: string, list: true }
+              - { name: message, label: Campo mensaje, type: string }
+              - { name: messagePlaceholder, label: Texto de ayuda del mensaje, type: string }
+              - { name: submit, label: Botón enviar, type: string }
+              - { name: sending, label: Texto mientras envía, type: string }
+              - { name: success, label: Mensaje de éxito, type: string }
+              - { name: error, label: Mensaje de error, type: string }
+              - { name: privacy, label: Nota de privacidad, type: string }
+
+      - name: footer
+        label: Pie de página
+        type: object
+        fields:
+          - { name: tagline, label: Lema, type: string }
+          - { name: rights, label: Derechos, type: string }
+
+  - name: es
+    label: "🇪🇸 Español"
+    type: file
+    path: src/data/es.json
+    format: json
+    fields: *fields
+
+  - name: fr
+    label: "🇫🇷 Français"
+    type: file
+    path: src/data/fr.json
+    format: json
+    fields: *fields

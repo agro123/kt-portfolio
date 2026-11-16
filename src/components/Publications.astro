@@ -1,0 +1,108 @@
+---
+import Icon from './Icon.astro';
+import LinkBar from './LinkBar.astro';
+import SectionHeading from './SectionHeading.astro';
+import type { Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { ip, publications, ui } = Astro.props.t;
+const linkOrder = ['pdf', 'code', 'data', 'doi'];
+const years = [...new Set(publications.items.map((p) => p.year))].sort().reverse();
+const trackLabel = (id: string) => publications.tracks.find((track) => track.id === id)?.label ?? id;
+
+const statusStyle: Record<string, string> = {
+  granted: 'border-accent bg-accent-soft text-accent-text',
+  licensed: 'border-accent bg-accent-soft text-accent-text',
+  pending: 'border-line bg-bg text-muted',
+};
+---
+
+<section id="publications" class="py-20 sm:py-24">
+  <div class="container-page">
+    <SectionHeading eyebrow={ip.eyebrow} title={ip.title} intro={ip.intro} />
+    <div class="mt-12 grid gap-4 lg:grid-cols-3">
+      {
+        ip.items.map((item) => (
+          <article class="card flex flex-col p-6">
+            <div class="flex items-center justify-between gap-3">
+              <span class="grid size-10 place-items-center rounded-xl bg-accent-soft text-accent-text">
+                <Icon name="patent" class="size-5" />
+              </span>
+              <span class:list={['rounded-full border px-2.5 py-1 font-mono text-[11px] font-medium', statusStyle[item.statusType] ?? statusStyle.pending]}>
+                {item.status}
+              </span>
+            </div>
+            <p class="mt-5 font-mono text-sm font-semibold text-ink">
+              {item.code}
+              <span class="ml-2 font-normal text-muted">{item.year}</span>
+            </p>
+            <h3 class="mt-2 font-display text-lg font-bold leading-snug text-ink">{item.title}</h3>
+            <div class="mt-auto pt-5">
+              <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">{ip.impactLabel}</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted">{item.impact}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="mt-20" data-filter-scope>
+      <SectionHeading level="h3" title={publications.title} intro={publications.intro} />
+
+      <div class="mt-8 flex flex-col gap-3">
+        <div role="group" aria-label={publications.trackLabel} class="flex flex-wrap items-center gap-2">
+          <span class="w-28 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">{publications.trackLabel}</span>
+          <button type="button" class="chip" data-filter-key="track" data-filter-value="" aria-pressed="true">{publications.allTracks}</button>
+          {
+            publications.tracks.map((track) => (
+              <button type="button" class="chip" data-filter-key="track" data-filter-value={track.id} aria-pressed="false">
+                {track.label}
+              </button>
+            ))
+          }
+        </div>
+        <div role="group" aria-label={publications.yearLabel} class="flex flex-wrap items-center gap-2">
+          <span class="w-28 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">{publications.yearLabel}</span>
+          <button type="button" class="chip" data-filter-key="year" data-filter-value="" aria-pressed="true">{publications.allYears}</button>
+          {
+            years.map((year) => (
+              <button type="button" class="chip font-mono" data-filter-key="year" data-filter-value={year} aria-pressed="false">
+                {year}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+
+      <ol class="m-0 mt-8 list-none border-t border-line p-0">
+        {
+          publications.items.map((pub) => (
+            <li class="grid gap-x-8 gap-y-3 border-b border-line py-7 md:grid-cols-[5.5rem_1fr]" data-filter-item data-track={pub.track} data-year={pub.year}>
+              <p class="font-mono text-2xl font-semibold tracking-tight text-ink">{pub.year}</p>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="rounded-md bg-accent-soft px-2 py-0.5 font-mono text-[11px] font-medium text-accent-text">{pub.authorship}</span>
+                  <span class="tag">{trackLabel(pub.track)}</span>
+                </div>
+                <h4 class="mt-3 font-display text-lg font-bold leading-snug text-ink">{pub.title}</h4>
+                <p class="mt-1.5 text-sm text-muted">
+                  {pub.authors} · <cite class="text-ink">{pub.journal}</cite>
+                </p>
+                <div class="mt-4 border-l-2 border-accent pl-4">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-accent-text">{publications.tldrLabel}</p>
+                  <p class="mt-1 max-w-2xl text-sm leading-relaxed text-ink">{pub.tldr}</p>
+                </div>
+                <div class="mt-4">
+                  <LinkBar links={pub.links} order={linkOrder} labels={ui.links} unavailable={ui.unavailable} context={pub.title} />
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="mt-8 text-sm text-muted" data-filter-empty hidden>{ui.noResults}</p>
+    </div>
+  </div>
+</section>

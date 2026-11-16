@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+import { fill, type Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { stack, ui } = Astro.props.t;
+const MAX_LEVEL = 5;
+---
+
+<section id="stack" class="border-y border-line bg-surface py-20 sm:py-24">
+  <div class="container-page">
+    <SectionHeading eyebrow={stack.eyebrow} title={stack.title} intro={stack.intro} />
+    <div class="mt-12 grid gap-4 lg:grid-cols-3">
+      {
+        stack.categories.map((category) => (
+          <div class="rounded-2xl border border-line bg-bg p-6">
+            <div class="flex items-center gap-3">
+              <span class="grid size-10 place-items-center rounded-xl bg-accent-soft text-accent-text">
+                <Icon name={category.icon} class="size-5" />
+              </span>
+              <h3 class="font-display text-base font-bold leading-snug text-ink">{category.title}</h3>
+            </div>
+            <ul class="m-0 mt-6 list-none space-y-4 p-0">
+              {category.skills.map((skill) => (
+                <li>
+                  <div class="flex items-baseline justify-between gap-3">
+                    <span class="text-sm font-medium text-ink">{skill.name}</span>
+                    <span class="whitespace-nowrap font-mono text-xs text-muted">
+                      <span class="text-sm font-semibold text-ink">{skill.years}</span> {ui.years}
+                    </span>
+                  </div>
+                  <div
+                    class="mt-2 flex gap-1"
+                    role="img"
+                    aria-label={fill(ui.proficiency, { level: skill.level, max: MAX_LEVEL })}
+                  >
+                    {Array.from({ length: MAX_LEVEL }, (_, i) => (
+                      <span class:list={['h-1.5 flex-1 rounded-full', i < skill.level ? 'bg-accent' : 'bg-line']} />
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

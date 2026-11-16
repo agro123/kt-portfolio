@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "title": "Katherine Medina Ortiz, PhD — I+D biomédica traslacional",
+    "description": "Bióloga y doctora en Ciencias Biomédicas. Descubrimiento de biomarcadores, validación preclínica, multi-ómica y liderazgo de I+D para biofarma, diagnóstico y consorcios de investigación.",
+    "keywords": "descubrimiento de biomarcadores, investigación traslacional, validación preclínica, multi-ómica, bioinformática, ciencias biomédicas, liderazgo de I+D",
+    "dateLocale": "es-CO",
+    "ogLocale": "es_CO",
+    "ogImage": ""
+  },
+  "site": {
+    "name": "Katherine Medina Ortiz",
+    "credential": "PhD",
+    "jobTitle": "Investigadora posdoctoral en Ciencias Biomédicas",
+    "email": "katherine.medina@example.com",
+    "sampleNotice": "Vista previa de la plantilla: los proyectos, métricas, publicaciones y patentes que aparecen aquí son contenido de ejemplo pendiente de reemplazo."
+  },
+  "languages": [
+    { "code": "en", "label": "EN", "name": "English" },
+    { "code": "es", "label": "ES", "name": "Español" },
+    { "code": "fr", "label": "FR", "name": "Français" }
+  ],
+  "ui": {
+    "skipToContent": "Saltar al contenido",
+    "mainNav": "Navegación principal",
+    "menu": "Menú",
+    "languageSwitcher": "Idioma",
+    "themeToggle": "Cambiar entre tema claro y oscuro",
+    "close": "Cerrar",
+    "years": "años",
+    "proficiency": "Dominio {level} de {max}",
+    "lastUpdated": "Última actualización",
+    "copyEmail": "Copiar correo",
+    "copied": "Copiado",
+    "noResults": "Aún no hay resultados para estos filtros.",
+    "backToTop": "Volver arriba",
+    "redirecting": "Redirigiendo a su idioma…",
+    "unavailable": "no disponible",
+    "links": {
+      "doi": "DOI",
+      "pdf": "PDF",
+      "code": "Código",
+      "data": "Datos",
+      "demo": "Demo"
+    }
+  },
+  "nav": {
+    "links": [
+      { "id": "projects", "label": "Proyectos de I+D" },
+      { "id": "publications", "label": "Publicaciones y PI" },
+      { "id": "career", "label": "Trayectoria" },
+      { "id": "about", "label": "Perfil" },
+      { "id": "contact", "label": "Contacto" }
+    ],
+    "cta": { "label": "Descargar CV", "href": "#cv" }
+  },
+  "hero": {
+    "badge": "Disponible para roles de liderazgo en I+D y colaboraciones — 2027",
+    "headline": "Convierto descubrimientos biomédicos complejos en",
+    "headlineAccent": "soluciones terapéuticas y diagnósticas escalables",
+    "subtitle": "Bióloga · PhD en Ciencias Biomédicas · Investigadora posdoctoral",
+    "summary": "Llevo biomarcadores y modelos preclínicos desde la hipótesis de laboratorio hasta activos validados y transferibles. Diez años entre biología molecular, multi-ómica y desarrollo de ensayos, con la documentación y la disciplina de calidad que un socio industrial necesita para continuar el trabajo.",
+    "ctaPrimary": { "label": "Ver casos de estudio", "href": "#projects" },
+    "ctaSecondary": { "label": "Descargar CV ejecutivo", "href": "assets/cv-industria-katherine-medina.pdf" },
+    "profilesLabel": "Trayectoria científica verificable",
+    "profiles": [
+      { "icon": "orcid", "label": "ORCID", "url": "https://orcid.org/0000-0000-0000-0000" },
+      { "icon": "scholar", "label": "Google Scholar", "url": "https://scholar.google.com/" },
+      { "icon": "pubmed", "label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/" },
+      { "icon": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+      { "icon": "github", "label": "GitHub", "url": "https://github.com/" }
+    ],
+    "portrait": {
+      "src": "assets/katherine-portrait.svg",
+      "alt": "Retrato de Katherine Medina Ortiz",
+      "caption": "Bogotá · Trabajo remoto"
+    },
+    "kpi": {
+      "value": "0,93",
+      "unit": "AUC",
+      "label": "Panel de detección temprana",
+      "note": "Estadios I–II, n = 412"
+    }
+  },
+  "pillars": {
+    "eyebrow": "Capacidades",
+    "title": "Profundidad científica, expresada en valor para la industria",
+    "intro": "Cuatro áreas en las que mi experiencia de investigación responde directamente a decisiones del pipeline de I+D.",
+    "applicationsLabel": "Aplicaciones industriales",
+    "items": [
+      {
+        "icon": "biomarker",
+        "title": "Descubrimiento de biomarcadores",
+        "description": "Del diseño de cohortes a un panel candidato cerrado: ácidos nucleicos circulantes, metilación y marcadores proteicos, con la utilidad clínica presente desde el primer día.",
+        "applications": [
+          "Estratificación de pacientes en ensayos clínicos",
+          "Diagnóstico acompañante y de detección temprana",
+          "Marcadores farmacodinámicos y de respuesta"
+        ]
+      },
+      {
+        "icon": "assay",
+        "title": "Validación preclínica y ensayos",
+        "description": "Modelos in vitro e in vivo robustos y ensayos que resisten la transferencia: organoides, cocultivos 3D, xenoinjertos y lecturas en placa con desempeño documentado.",
+        "applications": [
+          "Reducción de riesgo de candidatos antes del IND",
+          "Desarrollo y validación analítica de ensayos",
+          "Estudios de mecanismo de acción"
+        ]
+      },
+      {
+        "icon": "omics",
+        "title": "Bioinformática y multi-ómica",
+        "description": "Análisis reproducible de datos transcriptómicos, epigenómicos y proteómicos, para convertir conjuntos de datos de alta dimensión en una lista corta de decisiones comprobables.",
+        "applications": [
+          "Identificación y priorización de dianas",
+          "Desarrollo de firmas con validación externa",
+          "Pipelines auditables y versionados"
+        ]
+      },
+      {
+        "icon": "leadership",
+        "title": "Liderazgo de proyectos de I+D",
+        "description": "Planificación, financiación y entrega de proyectos multicéntricos: hitos, presupuestos, mentoría y los informes que mantienen alineados a patrocinadores y socios.",
+        "applications": [
+          "Gestión de proyectos interdisciplinarios",
+          "Coordinación de subvenciones y consorcios",
+          "Transferencia tecnológica a socios industriales"
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Resultados",
+    "title": "Las cifras detrás del trabajo",
+    "items": [
+      {
+        "value": "10+",
+        "label": "Años de experiencia en investigación",
+        "note": "Biología molecular, oncología traslacional y enfermedades infecciosas, en proyectos académicos y en alianza con la industria."
+      },
+      {
+        "value": "€1,8M",
+        "label": "Financiación competitiva gestionada",
+        "note": "Como investigadora principal o coinvestigadora en 5 proyectos financiados."
+      },
+      {
+        "value": "14",
+        "label": "Tesis e investigadores dirigidos",
+        "note": "Pregrado, maestría y doctorado."
+      },
+      {
+        "value": "3",
+        "label": "Patentes y desarrollos transferidos",
+        "note": "1 concedida · 1 PCT · 1 know-how licenciado."
+      }
+    ],
+    "institutionsLabel": "Instituciones colaboradoras",
+    "institutions": [
+      "Andean Institute of Biomedicine",
+      "Translational Oncology Unit",
+      "Pacific Genomics Core",
+      "BioAndes Diagnostics",
+      "Tropical Disease Consortium",
+      "EuroLatam Omics Network"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Casos de estudio destacados",
+    "title": "Proyectos de I+D, del problema al impacto cuantificado",
+    "intro": "Todos los casos siguen la misma estructura: el resultado se evalúa en menos de un minuto y se audita con un clic.",
+    "filterLabel": "Filtrar proyectos por área",
+    "filters": [
+      { "id": "", "label": "Todos" },
+      { "id": "biomarkers", "label": "Biomarcadores" },
+      { "id": "preclinical", "label": "Preclínica" },
+      { "id": "bioinformatics", "label": "Bioinformática" },
+      { "id": "industry", "label": "Industria" }
+    ],
+    "labels": {
+      "problem": "Problema / Reto",
+      "method": "Metodología y rol",
+      "impact": "Impacto cuantificado",
+      "role": "Mi rol",
+      "viewCase": "Ver caso de estudio",
+      "workflow": "Flujo de trabajo",
+      "ndaBadge": "Proyecto bajo NDA — Métricas dentro de rangos aprobados",
+      "ndaNote": "Este proyecto está cubierto por un acuerdo de confidencialidad. No se revela la identidad del patrocinador, la diana ni el compuesto; todas las cifras se presentan como rangos aprobados para divulgación. Los detalles adicionales pueden tratarse bajo un NDA mutuo."
+    },
+    "items": [
+      {
+        "id": "cfdna-methylation-panel",
+        "category": "biomarkers",
+        "year": "2022–2025",
+        "title": "Panel de metilación en biopsia líquida para la detección temprana de cáncer colorrectal",
+        "summary": "Un panel de 12 marcadores en plasma que detecta enfermedad en estadios I–II a partir de una muestra de sangre estándar.",
+        "abstract": [
+          { "glyph": "sample", "label": "Cohorte de plasma" },
+          { "glyph": "dna", "label": "Metilación de cfDNA" },
+          { "glyph": "chart", "label": "Clasificador ML" },
+          { "glyph": "target", "label": "Panel de 12 marcadores" }
+        ],
+        "problem": "La mayoría de los cánceres colorrectales de la población objetivo se diagnostican en estadios III–IV, y la adherencia al tamizaje por colonoscopia no supera el 40 %. Hacía falta una prueba en sangre para decidir a quién remitir primero.",
+        "method": "Secuenciación dirigida con bisulfito de ADN libre circulante en 412 muestras de plasma de dos hospitales, con un diseño de casos y controles prerregistrado. Las regiones candidatas se priorizaron con un clasificador regularizado y se cerraron antes de evaluarlas en un conjunto independiente.",
+        "role": "Líder científica: diseño del estudio, protocolo de laboratorio, plan de análisis y supervisión de un equipo de cuatro personas.",
+        "impact": "El panel cerrado alcanzó un AUC de 0,93, con sensibilidad del 87 % y especificidad del 92 % en estadios I–II. Se presentó una solicitud PCT y el ensayo pasó a un socio de diagnóstico para su validación analítica.",
+        "metrics": [
+          { "value": "0,93", "label": "AUC, conjunto independiente" },
+          { "value": "87 %", "label": "Sensibilidad, estadios I–II" },
+          { "value": "412", "label": "Muestras de plasma" }
+        ],
+        "tags": ["cfDNA", "Bisulfite-seq", "ddPCR", "Machine learning", "Cohorte clínica"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2025.001",
+          "pdf": "",
+          "code": "https://github.com/",
+          "data": "https://zenodo.org/",
+          "demo": ""
+        }
+      },
+      {
+        "id": "organoid-drug-response",
+        "category": "preclinical",
+        "year": "2021–2024",
+        "title": "Plataforma de organoides derivados de pacientes para perfilar la respuesta a fármacos",
+        "summary": "Un biobanco de organoides y un conjunto de ensayos estandarizados que predicen la respuesta a quimioterapia antes del tratamiento.",
+        "abstract": [
+          { "glyph": "clinic", "label": "Biopsia tumoral" },
+          { "glyph": "organoid", "label": "Biobanco de organoides" },
+          { "glyph": "plate", "label": "Cribado en 384 pocillos" },
+          { "glyph": "chart", "label": "Índice de respuesta" }
+        ],
+        "problem": "Las líneas celulares bidimensionales predicen mal la respuesta clínica, lo que contribuye a tasas de fracaso superiores al 90 % en el desarrollo oncológico. Los socios necesitaban un modelo más cercano al paciente que conservara capacidad de cribado.",
+        "method": "Se establecieron 38 líneas de organoides gástricos y colorrectales con datos clínicos asociados. Los ensayos de viabilidad e imagen de alto contenido se estandarizaron en formato de 384 pocillos bajo POE alineados con BPL, con criterios de calidad por placa (Z′ > 0,7).",
+        "role": "Responsable de la plataforma: desarrollo de protocolos, validación de ensayos, redacción de POE y formación de tres grupos socios.",
+        "impact": "El tiempo de cribado bajó de 6 a 2,5 semanas. En un conjunto retrospectivo de 22 pacientes, la respuesta de los organoides coincidió con la respuesta clínica en el 82 % de los casos. Tres grupos externos adoptaron el protocolo.",
+        "metrics": [
+          { "value": "82 %", "label": "Concordancia con la respuesta clínica" },
+          { "value": "38", "label": "Líneas de organoides en biobanco" },
+          { "value": "−58 %", "label": "Tiempo de cribado" }
+        ],
+        "tags": ["Organoides", "Imagen de alto contenido", "Ensayos en 384 pocillos", "BPL", "POE"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2024.002",
+          "pdf": "",
+          "code": "",
+          "data": "https://zenodo.org/",
+          "demo": ""
+        }
+      },
+      {
+        "id": "dengue-severity-signature",
+        "category": "bioinformatics",
+        "year": "2020–2024",
+        "title": "Firma multi-ómica del huésped que predice dengue grave",
+        "summary": "Una firma de 8 genes, medida en las primeras 72 horas de fiebre, que identifica a los pacientes con mayor probabilidad de progresar.",
+        "abstract": [
+          { "glyph": "sample", "label": "Sangre, días 1–3" },
+          { "glyph": "network", "label": "RNA-seq + proteómica" },
+          { "glyph": "chip", "label": "Pipeline Nextflow" },
+          { "glyph": "shield", "label": "Firma de 8 genes" }
+        ],
+        "problem": "Durante los brotes, los médicos no pueden saber pronto qué pacientes con dengue desarrollarán enfermedad grave, y los hospitales ingresan a muchas más personas de las que necesitan atención. No existía un predictor temprano validado.",
+        "method": "Integración de RNA-seq de sangre total y proteómica dirigida en plasma de 186 pacientes. Todos los pasos se ejecutan en un pipeline Nextflow en contenedores, y la firma se evaluó en una cohorte independiente de 94 pacientes de otra región.",
+        "role": "Analista principal y colíder del paquete de trabajo: estrategia de análisis, arquitectura del pipeline y validación externa.",
+        "impact": "La firma alcanzó un AUC de 0,89 en la validación externa. El pipeline es de código abierto y lo han reutilizado cinco laboratorios. La firma es la base de un prototipo de RT-qPCR actualmente bajo licencia.",
+        "metrics": [
+          { "value": "0,89", "label": "AUC, validación externa" },
+          { "value": "186 + 94", "label": "Pacientes: descubrimiento + validación" },
+          { "value": "5", "label": "Laboratorios que reutilizan el pipeline" }
+        ],
+        "tags": ["RNA-seq", "Proteómica", "Nextflow", "R / Bioconductor", "Validación externa"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2024.003",
+          "pdf": "",
+          "code": "https://github.com/",
+          "data": "https://www.ncbi.nlm.nih.gov/geo/",
+          "demo": "https://github.com/"
+        }
+      },
+      {
+        "id": "companion-diagnostic-assay",
+        "category": "industry",
+        "year": "2024–2025",
+        "title": "Ensayo de diagnóstico acompañante para un activo de inmunooncología",
+        "summary": "Un ensayo de estratificación desarrollado y transferido antes del inicio de la Fase II del patrocinador.",
+        "abstract": [
+          { "glyph": "molecule", "label": "Marcadores candidatos" },
+          { "glyph": "plate", "label": "Diseño del ensayo (DoE)" },
+          { "glyph": "shield", "label": "Validación analítica" },
+          { "glyph": "clinic", "label": "Transferencia a la CRO" }
+        ],
+        "problem": "Un patrocinador biofarmacéutico necesitaba un ensayo de estratificación de pacientes listo antes de iniciar la Fase II, con un calendario regulatorio fijo y sin un método validado disponible.",
+        "method": "Optimización por diseño de experimentos de un inmunoensayo múltiplex bajo control de diseño alineado con ISO 13485, seguida de la validación analítica frente a criterios de aceptación predefinidos y de un paquete completo de transferencia tecnológica.",
+        "role": "Líder de proyecto de un equipo interdisciplinario de seis personas y principal contacto científico con el patrocinador.",
+        "impact": "Se cumplieron todos los criterios de aceptación predefinidos, con una variabilidad entre corridas inferior al 10 %. El paquete se entregó entre 4 y 6 semanas antes de lo previsto y se transfirió al laboratorio contratado por el patrocinador sin necesidad de redesarrollo.",
+        "metrics": [
+          { "value": "<10 %", "label": "CV entre corridas" },
+          { "value": "4–6 sem", "label": "Antes de lo previsto" },
+          { "value": "100 %", "label": "Criterios de aceptación cumplidos" }
+        ],
+        "tags": ["Inmunoensayo múltiplex", "DoE", "ISO 13485", "Transferencia tecnológica", "Relación con patrocinador"],
+        "nda": true,
+        "links": { "doi": "", "pdf": "", "code": "", "data": "", "demo": "" }
+      }
+    ]
+  },
+  "stack": {
+    "eyebrow": "Stack técnico",
+    "title": "Herramientas experimentales y analíticas",
+    "intro": "Años de uso práctico y nivel de dominio autoevaluado para cada método.",
+    "categories": [
+      {
+        "icon": "microscope",
+        "title": "Biología molecular y ensayos in vitro / in vivo",
+        "skills": [
+          { "name": "qPCR y PCR digital", "years": 10, "level": 5 },
+          { "name": "Inmunoensayos (ELISA, múltiplex)", "years": 9, "level": 5 },
+          { "name": "Cultivo celular y organoides 3D", "years": 8, "level": 5 },
+          { "name": "Citometría de flujo", "years": 7, "level": 4 },
+          { "name": "Edición genómica con CRISPR-Cas9", "years": 5, "level": 4 },
+          { "name": "Modelos murinos de xenoinjerto", "years": 4, "level": 3 }
+        ]
+      },
+      {
+        "icon": "chart",
+        "title": "Análisis de datos y bioinformática",
+        "skills": [
+          { "name": "R y Bioconductor", "years": 9, "level": 5 },
+          { "name": "Bioestadística y análisis de supervivencia", "years": 8, "level": 4 },
+          { "name": "RNA-seq y análisis de célula única", "years": 7, "level": 4 },
+          { "name": "Python (pandas, scikit-learn)", "years": 6, "level": 4 },
+          { "name": "Nextflow y pipelines en contenedores", "years": 4, "level": 3 },
+          { "name": "Machine learning para biomarcadores", "years": 4, "level": 3 }
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Gestión de calidad y transferencia tecnológica",
+        "skills": [
+          { "name": "Redacción de POE y validación de ensayos", "years": 8, "level": 5 },
+          { "name": "Diseño de experimentos (DoE)", "years": 7, "level": 4 },
+          { "name": "Redacción de propuestas y gestión de consorcios", "years": 7, "level": 4 },
+          { "name": "Buenas Prácticas de Laboratorio (BPL)", "years": 6, "level": 4 },
+          { "name": "ISO 13485 e ISO 15189", "years": 4, "level": 3 },
+          { "name": "Estrategia de PI y redacción de patentes", "years": 4, "level": 3 }
+        ]
+      }
+    ]
+  },
+  "ip": {
+    "eyebrow": "Publicaciones y PI",
+    "title": "Patentes y activos transferibles",
+    "intro": "Resultados protegidos, con un estado legal definido y una ruta clara de uso.",
+    "impactLabel": "Impacto comercial / clínico",
+    "items": [
+      {
+        "code": "WO 2025/000000 A1",
+        "status": "PCT publicada",
+        "statusType": "pending",
+        "year": "2025",
+        "title": "Panel de biomarcadores de metilación para la detección temprana de cáncer colorrectal en plasma",
+        "impact": "En negociación de licencia con un socio de diagnóstico. Permite un triaje no invasivo previo a la colonoscopia en programas de tamizaje."
+      },
+      {
+        "code": "CO NC2023/0000000",
+        "status": "Concedida · Colombia",
+        "statusType": "granted",
+        "year": "2023",
+        "title": "Método in vitro para predecir la respuesta a fármacos mediante organoides derivados de pacientes",
+        "impact": "En uso en tres laboratorios socios. Acorta el cribado preclínico y reduce el uso de animales en los estudios tempranos de eficacia."
+      },
+      {
+        "code": "TT-2024-07",
+        "status": "Know-how licenciado",
+        "statusType": "licensed",
+        "year": "2024",
+        "title": "Paquete de ensayo RT-qPCR para una firma de 8 genes de gravedad en dengue",
+        "impact": "Licencia no exclusiva a un fabricante regional. Facilita el triaje hospitalario temprano durante los brotes con equipos de qPCR estándar."
+      }
+    ]
+  },
+  "publications": {
+    "title": "Publicaciones seleccionadas",
+    "intro": "Una selección elegida por su relevancia traslacional. La lista completa está en ORCID y en el CV académico.",
+    "trackLabel": "Línea",
+    "yearLabel": "Año",
+    "allTracks": "Todas las líneas",
+    "allYears": "Todos los años",
+    "tldrLabel": "Resumen ejecutivo",
+    "tracks": [
+      { "id": "biomarkers", "label": "Biomarcadores" },
+      { "id": "models", "label": "Modelos preclínicos" },
+      { "id": "omics", "label": "Multi-ómica" }
+    ],
+    "items": [
+      {
+        "year": "2025",
+        "track": "biomarkers",
+        "authorship": "Primera autora",
+        "title": "Plasma cell-free DNA methylation signatures enable early-stage colorectal cancer detection in a Latin American cohort",
+        "authors": "Medina-Ortiz K, Ramírez J, Duarte P, Henao M, Castaño L",
+        "journal": "Clinical Epigenomics Reports",
+        "tldr": "Una prueba de sangre basada en 12 marcas del ADN detecta el cáncer colorrectal temprano con una precisión cercana a la de las herramientas actuales de tamizaje. Ayudaría a priorizar quién necesita una colonoscopia.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "https://zenodo.org/", "doi": "https://doi.org/10.5555/kmo.2025.001" }
+      },
+      {
+        "year": "2024",
+        "track": "omics",
+        "authorship": "Coprimera autora",
+        "title": "An integrated transcriptomic and proteomic signature predicts progression to severe dengue",
+        "authors": "Medina-Ortiz K*, Salazar A*, Okafor N, Vélez D, Brandt H",
+        "journal": "Journal of Translational Infection",
+        "tldr": "Ocho genes medidos en los tres primeros días de fiebre identifican a los pacientes con riesgo de dengue grave. Validado en una cohorte independiente de otra región.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "https://www.ncbi.nlm.nih.gov/geo/", "doi": "https://doi.org/10.5555/kmo.2024.003" }
+      },
+      {
+        "year": "2024",
+        "track": "models",
+        "authorship": "Primera autora",
+        "title": "Standardised patient-derived organoid assays predict chemotherapy response in gastric cancer",
+        "authors": "Medina-Ortiz K, Lemaire C, Pardo S, Giraldo F, Castaño L",
+        "journal": "Precision Oncology Methods",
+        "tldr": "Minitumores cultivados a partir de biopsias respondieron a los fármacos igual que los pacientes en el 82 % de los casos. El protocolo funciona a escala de cribado.",
+        "links": { "pdf": "", "code": "", "data": "https://zenodo.org/", "doi": "https://doi.org/10.5555/kmo.2024.002" }
+      },
+      {
+        "year": "2023",
+        "track": "omics",
+        "authorship": "Autora de correspondencia",
+        "title": "A reproducible Nextflow workflow for multi-omics integration in small clinical cohorts",
+        "authors": "Salazar A, Brandt H, Medina-Ortiz K",
+        "journal": "Bioinformatics Tools and Protocols",
+        "tldr": "Un pipeline de código abierto que permite a equipos clínicos pequeños combinar varios tipos de datos de forma fiable. Un tercero puede volver a ejecutar y auditar los resultados.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "", "doi": "https://doi.org/10.5555/kmo.2023.004" }
+      },
+      {
+        "year": "2022",
+        "track": "biomarkers",
+        "authorship": "Primera autora",
+        "title": "Circulating microRNA profiles as minimally invasive markers of treatment response in gastric cancer",
+        "authors": "Medina-Ortiz K, Henao M, Duarte P, Castaño L",
+        "journal": "Molecular Diagnostics Letters",
+        "tldr": "Pequeñas moléculas de ARN en sangre cambian en pocas semanas cuando la quimioterapia funciona. Ofrecen una señal más temprana que las imágenes para ajustar el tratamiento.",
+        "links": { "pdf": "", "code": "", "data": "", "doi": "https://doi.org/10.5555/kmo.2022.005" }
+      },
+      {
+        "year": "2021",
+        "track": "models",
+        "authorship": "Coautora (3 de 9)",
+        "title": "Tumour–stroma crosstalk shapes drug tolerance in three-dimensional co-culture models",
+        "authors": "Lemaire C, Pardo S, Medina-Ortiz K, et al.",
+        "journal": "Cell Models in Disease",
+        "tldr": "Las células de soporte que rodean al tumor lo ayudan a tolerar los fármacos. Incluirlas en los modelos de laboratorio da una imagen más realista de la eficacia.",
+        "links": { "pdf": "", "code": "", "data": "", "doi": "https://doi.org/10.5555/kmo.2021.006" }
+      }
+    ]
+  },
+  "career": {
+    "eyebrow": "Trayectoria",
+    "title": "Experiencia y formación",
+    "experienceTitle": "Experiencia",
+    "educationTitle": "Formación",
+    "items": [
+      {
+        "period": "2023 — Actualidad",
+        "role": "Investigadora posdoctoral, Oncología traslacional",
+        "org": "Andean Institute of Biomedicine",
+        "summary": "Lidero el programa de biopsia líquida y su transferencia a un socio de diagnóstico. Coinvestigadora en dos proyectos competitivos; superviso a cuatro investigadores."
+      },
+      {
+        "period": "2019 — 2023",
+        "role": "Investigadora doctoral, Ciencias Biomédicas",
+        "org": "Translational Oncology Unit",
+        "summary": "Construí la plataforma de organoides derivados de pacientes y su conjunto de ensayos validados. Tesis aprobada con la máxima distinción."
+      },
+      {
+        "period": "2016 — 2019",
+        "role": "Investigadora asociada, Diagnóstico molecular",
+        "org": "Tropical Disease Consortium",
+        "summary": "Desarrollé y validé ensayos basados en qPCR para la vigilancia de enfermedades infecciosas bajo un sistema de calidad ISO 15189."
+      }
+    ],
+    "education": [
+      { "year": "2023", "degree": "Doctorado en Ciencias Biomédicas", "org": "Translational Oncology Unit" },
+      { "year": "2018", "degree": "Maestría en Biología Molecular y Biotecnología", "org": "Andean Institute of Biomedicine" },
+      { "year": "2015", "degree": "Biología (pregrado)", "org": "Colombia" }
+    ]
+  },
+  "about": {
+    "eyebrow": "Perfil",
+    "title": "Una científica que construye cosas que otros equipos pueden usar",
+    "bio": [
+      "Me formé como bióloga en Colombia e hice un doctorado en Ciencias Biomédicas centrado en oncología traslacional. Mi trabajo está entre el descubrimiento y el desarrollo: encontrar señales en muestras de pacientes, demostrar que se sostienen y empaquetarlas para que un socio pueda llevarlas más lejos.",
+      "Trabajo en español, inglés y francés, y me siento cómoda presentando ante clínicos, inversionistas y reguladores, además de otros científicos."
+    ],
+    "now": {
+      "title": "Ahora",
+      "updated": "2026-11-01",
+      "items": [
+        "Dirijo la validación analítica del panel de metilación con un socio de diagnóstico.",
+        "Escribo una propuesta de consorcio sobre pruebas de respuesta a fármacos basadas en organoides.",
+        "Exploro roles de principal scientist y liderazgo de I+D en biofarma y diagnóstico para 2027."
+      ]
+    }
+  },
+  "cv": {
+    "eyebrow": "Currículum",
+    "title": "Dos CV, para dos tipos de lector",
+    "items": [
+      {
+        "icon": "briefcase",
+        "title": "CV corporativo / industria",
+        "description": "Resultados, competencias y liderazgo en una o dos páginas, en formato compatible con ATS.",
+        "meta": "PDF · 1–2 páginas",
+        "file": "assets/cv-industria-katherine-medina.pdf",
+        "cta": "Descargar CV de industria"
+      },
+      {
+        "icon": "scholar",
+        "title": "CV académico completo",
+        "description": "Registro completo de publicaciones, financiación, docencia, dirección de tesis y participación en congresos.",
+        "meta": "PDF · Registro completo",
+        "file": "assets/cv-academico-katherine-medina.pdf",
+        "cta": "Descargar CV académico"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de su reto de I+D",
+    "intro": "Suelo responder en un plazo de dos días hábiles.",
+    "availabilityLabel": "Disponible para",
+    "availability": [
+      {
+        "icon": "briefcase",
+        "title": "Liderazgo de I+D / Principal Scientist",
+        "description": "Equipos de investigación traslacional, biomarcadores y desarrollo de ensayos en biofarma y diagnóstico."
+      },
+      {
+        "icon": "consulting",
+        "title": "Consultoría científica",
+        "description": "Diseño de estudios, estrategia de validación de ensayos, revisión de análisis de datos y due diligence técnica."
+      },
+      {
+        "icon": "consortium",
+        "title": "Consorcios y convocatorias conjuntas",
+        "description": "Liderazgo de paquetes de trabajo y cosolicitud en convocatorias nacionales e internacionales."
+      }
+    ],
+    "emailLabel": "Correo directo",
+    "form": {
+      "endpoint": "",
+      "accessKey": "",
+      "title": "Enviar un mensaje",
+      "name": "Nombre",
+      "email": "Correo de trabajo",
+      "organization": "Organización",
+      "topic": "Tema",
+      "topics": ["Rol de I+D", "Consultoría", "Consorcio o convocatoria", "Otro"],
+      "message": "Mensaje",
+      "messagePlaceholder": "Unas líneas sobre su proyecto, los plazos y lo que necesita.",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "Mensaje enviado. Gracias, responderé pronto.",
+      "error": "No se pudo enviar el mensaje. Por favor, use la dirección de correo.",
+      "privacy": "Sus datos solo se usan para responder a este mensaje."
+    }
+  },
+  "footer": {
+    "tagline": "I+D biomédica traslacional",
+    "rights": "Todos los derechos reservados."
+  }
+}

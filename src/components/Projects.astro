@@ -1,0 +1,159 @@
+---
+import Icon from './Icon.astro';
+import GraphicalAbstract from './GraphicalAbstract.astro';
+import LinkBar from './LinkBar.astro';
+import SectionHeading from './SectionHeading.astro';
+import type { Content } from '../i18n';
+
+interface Props {
+  t: Content;
+}
+const { projects, ui } = Astro.props.t;
+const { labels } = projects;
+const linkOrder = ['doi', 'pdf', 'code', 'data', 'demo'];
+const categoryLabel = (id: string) => projects.filters.find((f) => f.id === id)?.label ?? id;
+---
+
+<section id="projects" class="py-20 sm:py-24">
+  <div class="container-page" data-filter-scope>
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <SectionHeading eyebrow={projects.eyebrow} title={projects.title} intro={projects.intro} />
+      <div role="group" aria-label={projects.filterLabel} class="flex flex-wrap gap-2">
+        {
+          projects.filters.map((filter) => (
+            <button type="button" class="chip" data-filter-key="category" data-filter-value={filter.id} aria-pressed={filter.id === '' ? 'true' : 'false'}>
+              {filter.label}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2">
+      {
+        projects.items.map((project) => (
+          <article class="card flex flex-col overflow-hidden" data-filter-item data-category={project.category}>
+            <div class="border-b border-line bg-bg px-5 py-5">
+              <GraphicalAbstract steps={project.abstract} label={labels.workflow} />
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] text-muted">
+                <span class="uppercase tracking-[0.14em] text-accent-text">{categoryLabel(project.category)}</span>
+                <span>{project.year}</span>
+              </div>
+              {project.nda && (
+                <p class="mt-3 inline-flex w-fit items-center gap-1.5 rounded-md border border-line bg-bg px-2 py-1 font-mono text-[11px] text-muted">
+                  <Icon name="lock" class="size-3.5" />
+                  {labels.ndaBadge}
+                </p>
+              )}
+              <h3 class="mt-3 font-display text-xl font-bold leading-snug text-ink">{project.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{project.summary}</p>
+
+              <dl class="m-0 mt-5 grid grid-cols-3 gap-3 border-y border-line py-4">
+                {project.metrics.map((metric) => (
+                  <div>
+                    <dd class="m-0 font-mono text-xl font-semibold tracking-tight text-ink">{metric.value}</dd>
+                    <dt class="mt-1 text-[11px] leading-snug text-muted">{metric.label}</dt>
+                  </div>
+                ))}
+              </dl>
+
+              <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
+                <button type="button" class="btn btn-ghost cursor-pointer !px-4 !py-2 text-[13px]" data-dialog-open={`case-${project.id}`}>
+                  {labels.viewCase}
+                  <Icon name="arrow-right" class="size-4" />
+                </button>
+                <LinkBar links={project.links} order={linkOrder} labels={ui.links} unavailable={ui.unavailable} context={project.title} />
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <p class="mt-8 text-sm text-muted" data-filter-empty hidden>{ui.noResults}</p>
+  </div>
+
+  {
+    projects.items.map((project) => (
+      <dialog
+        id={`case-${project.id}`}
+        aria-labelledby={`case-${project.id}-title`}
+        class="m-auto max-h-[90vh] w-[min(100%-1.5rem,58rem)] overflow-y-auto rounded-3xl border border-line bg-surface-solid p-0 text-ink shadow-2xl backdrop:bg-slate-950/60 backdrop:backdrop-blur-sm"
+      >
+        <div class="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-line bg-surface-solid px-6 py-4 sm:px-8">
+          <div>
+            <p class="font-mono text-[11px] text-muted">
+              <span class="uppercase tracking-[0.14em] text-accent-text">{categoryLabel(project.category)}</span>
+              <span class="ml-2">{project.year}</span>
+            </p>
+            <h3 id={`case-${project.id}-title`} class="mt-1 font-display text-xl font-bold leading-snug sm:text-2xl">
+              {project.title}
+            </h3>
+          </div>
+          <button
+            type="button"
+            data-dialog-close
+            aria-label={ui.close}
+            class="grid size-9 shrink-0 cursor-pointer place-items-center rounded-full border border-line text-muted hover:text-ink"
+          >
+            <Icon name="close" class="size-4" />
+          </button>
+        </div>
+
+        <div class="px-6 py-6 sm:px-8">
+          {project.nda && (
+            <div class="mb-6 rounded-xl border border-line bg-bg p-4">
+              <p class="flex items-center gap-1.5 font-mono text-xs font-medium text-ink">
+                <Icon name="lock" class="size-4 text-accent-text" />
+                {labels.ndaBadge}
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{labels.ndaNote}</p>
+            </div>
+          )}
+
+          <div class="rounded-2xl border border-line bg-bg px-4 py-5">
+            <div class="mx-auto max-w-xl">
+              <GraphicalAbstract steps={project.abstract} label={labels.workflow} />
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-8 md:grid-cols-3">
+            <div>
+              <p class="eyebrow">{labels.problem}</p>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{project.problem}</p>
+            </div>
+            <div>
+              <p class="eyebrow">{labels.method}</p>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{project.method}</p>
+              <p class="mt-3 border-l-2 border-accent pl-3 text-sm leading-relaxed text-ink">
+                <span class="block font-mono text-[10px] uppercase tracking-[0.16em] text-muted">{labels.role}</span>
+                {project.role}
+              </p>
+            </div>
+            <div>
+              <p class="eyebrow">{labels.impact}</p>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{project.impact}</p>
+            </div>
+          </div>
+
+          <dl class="m-0 mt-8 grid grid-cols-3 gap-3 rounded-2xl bg-accent-soft p-5">
+            {project.metrics.map((metric) => (
+              <div>
+                <dd class="m-0 font-mono text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{metric.value}</dd>
+                <dt class="mt-1 text-xs leading-snug text-muted">{metric.label}</dt>
+              </div>
+            ))}
+          </dl>
+
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <ul class="m-0 flex list-none flex-wrap gap-1.5 p-0">
+              {project.tags.map((tag) => <li class="tag">{tag}</li>)}
+            </ul>
+            <LinkBar links={project.links} order={linkOrder} labels={ui.links} unavailable={ui.unavailable} context={project.title} />
+          </div>
+        </div>
+      </dialog>
+    ))
+  }
+</section>

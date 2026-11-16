@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Pillars from '../../components/Pillars.astro';
+import Metrics from '../../components/Metrics.astro';
+import Projects from '../../components/Projects.astro';
+import Stack from '../../components/Stack.astro';
+import Publications from '../../components/Publications.astro';
+import Career from '../../components/Career.astro';
+import About from '../../components/About.astro';
+import Contact from '../../components/Contact.astro';
+import { getContent, langs } from '../../i18n';
+
+export function getStaticPaths() {
+  return langs.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = getContent(lang);
+---
+
+<Base lang={lang} t={t}>
+  <Hero t={t} />
+  <Pillars t={t} />
+  <Metrics t={t} />
+  <Projects t={t} />
+  <Stack t={t} />
+  <Publications t={t} />
+  <Career t={t} />
+  <About t={t} />
+  <Contact t={t} />
+</Base>

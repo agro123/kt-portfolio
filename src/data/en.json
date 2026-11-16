@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "title": "Katherine Medina Ortiz, PhD — Translational Biomedical R&D",
+    "description": "Biologist and PhD in Biomedical Sciences. Biomarker discovery, preclinical validation, multi-omics and R&D leadership for biopharma, diagnostics and research consortia.",
+    "keywords": "biomarker discovery, translational research, preclinical validation, multi-omics, bioinformatics, biomedical sciences, R&D leadership",
+    "dateLocale": "en-GB",
+    "ogLocale": "en_GB",
+    "ogImage": ""
+  },
+  "site": {
+    "name": "Katherine Medina Ortiz",
+    "credential": "PhD",
+    "jobTitle": "Postdoctoral Researcher in Biomedical Sciences",
+    "email": "katherine.medina@example.com",
+    "sampleNotice": "Template preview — projects, metrics, publications and patents shown here are sample content pending replacement."
+  },
+  "languages": [
+    { "code": "en", "label": "EN", "name": "English" },
+    { "code": "es", "label": "ES", "name": "Español" },
+    { "code": "fr", "label": "FR", "name": "Français" }
+  ],
+  "ui": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "menu": "Menu",
+    "languageSwitcher": "Language",
+    "themeToggle": "Toggle light / dark theme",
+    "close": "Close",
+    "years": "yrs",
+    "proficiency": "Proficiency {level} of {max}",
+    "lastUpdated": "Last updated",
+    "copyEmail": "Copy email",
+    "copied": "Copied",
+    "noResults": "Nothing matches these filters yet.",
+    "backToTop": "Back to top",
+    "redirecting": "Redirecting to your language…",
+    "unavailable": "not available",
+    "links": {
+      "doi": "DOI",
+      "pdf": "PDF",
+      "code": "Code",
+      "data": "Data",
+      "demo": "Demo"
+    }
+  },
+  "nav": {
+    "links": [
+      { "id": "projects", "label": "R&D Projects" },
+      { "id": "publications", "label": "Publications & IP" },
+      { "id": "career", "label": "Career" },
+      { "id": "about", "label": "About" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "cta": { "label": "Download CV", "href": "#cv" }
+  },
+  "hero": {
+    "badge": "Open to R&D leadership roles and collaborations — 2027",
+    "headline": "Translating complex biomedical discoveries into",
+    "headlineAccent": "scalable therapeutic and diagnostic solutions",
+    "subtitle": "Biologist · PhD in Biomedical Sciences · Postdoctoral Researcher",
+    "summary": "I take biomarkers and preclinical models from bench hypothesis to validated, transferable assets. Ten years across molecular biology, multi-omics and assay development, with the documentation and quality discipline industry partners need to build on the result.",
+    "ctaPrimary": { "label": "Explore case studies", "href": "#projects" },
+    "ctaSecondary": { "label": "Download executive resume", "href": "assets/cv-industria-katherine-medina.pdf" },
+    "profilesLabel": "Verified scientific record",
+    "profiles": [
+      { "icon": "orcid", "label": "ORCID", "url": "https://orcid.org/0000-0000-0000-0000" },
+      { "icon": "scholar", "label": "Google Scholar", "url": "https://scholar.google.com/" },
+      { "icon": "pubmed", "label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/" },
+      { "icon": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+      { "icon": "github", "label": "GitHub", "url": "https://github.com/" }
+    ],
+    "portrait": {
+      "src": "assets/katherine-portrait.svg",
+      "alt": "Portrait of Katherine Medina Ortiz",
+      "caption": "Bogotá · Remote-ready"
+    },
+    "kpi": {
+      "value": "0.93",
+      "unit": "AUC",
+      "label": "Early-stage detection panel",
+      "note": "Stage I–II, n = 412"
+    }
+  },
+  "pillars": {
+    "eyebrow": "Capabilities",
+    "title": "Scientific depth, expressed as industry value",
+    "intro": "Four areas where my research experience maps directly onto R&D pipeline decisions.",
+    "applicationsLabel": "Industrial applications",
+    "items": [
+      {
+        "icon": "biomarker",
+        "title": "Biomarker Discovery",
+        "description": "From cohort design to a locked candidate panel: circulating nucleic acids, methylation and protein markers with clinical utility in mind from day one.",
+        "applications": [
+          "Patient stratification for clinical trials",
+          "Companion and early-detection diagnostics",
+          "Pharmacodynamic and response markers"
+        ]
+      },
+      {
+        "icon": "assay",
+        "title": "Preclinical Validation & Assays",
+        "description": "Robust in vitro and in vivo models with assays that survive transfer: organoids, 3D co-cultures, xenografts and plate-based readouts with documented performance.",
+        "applications": [
+          "Lead candidate de-risking before IND",
+          "Assay development and analytical validation",
+          "Mechanism-of-action studies"
+        ]
+      },
+      {
+        "icon": "omics",
+        "title": "Bioinformatics & Multi-Omics",
+        "description": "Reproducible analysis of transcriptomic, epigenomic and proteomic data, turning high-dimensional datasets into a short list of testable decisions.",
+        "applications": [
+          "Target identification and prioritisation",
+          "Signature development with external validation",
+          "Auditable, version-controlled pipelines"
+        ]
+      },
+      {
+        "icon": "leadership",
+        "title": "R&D Project Leadership",
+        "description": "Planning, funding and delivering multi-site projects: milestones, budgets, mentoring and the reporting that keeps sponsors and partners aligned.",
+        "applications": [
+          "Cross-functional project management",
+          "Grant and consortium coordination",
+          "Technology transfer to industry partners"
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Track record",
+    "title": "The numbers behind the work",
+    "items": [
+      {
+        "value": "10+",
+        "label": "Years of research experience",
+        "note": "Molecular biology, translational oncology and infectious disease, across academic and industry-partnered projects."
+      },
+      {
+        "value": "€1.8M",
+        "label": "Competitive grant funding managed",
+        "note": "As principal or co-investigator in 5 funded projects."
+      },
+      {
+        "value": "14",
+        "label": "Theses and researchers mentored",
+        "note": "BSc, MSc and PhD level."
+      },
+      {
+        "value": "3",
+        "label": "Patents and transferred developments",
+        "note": "1 granted · 1 PCT · 1 licensed know-how."
+      }
+    ],
+    "institutionsLabel": "Collaborating institutions",
+    "institutions": [
+      "Andean Institute of Biomedicine",
+      "Translational Oncology Unit",
+      "Pacific Genomics Core",
+      "BioAndes Diagnostics",
+      "Tropical Disease Consortium",
+      "EuroLatam Omics Network"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Flagship case studies",
+    "title": "R&D projects, from problem to quantified impact",
+    "intro": "Each case study follows the same structure, so the outcome can be assessed in under a minute and audited in one click.",
+    "filterLabel": "Filter projects by area",
+    "filters": [
+      { "id": "", "label": "All" },
+      { "id": "biomarkers", "label": "Biomarkers" },
+      { "id": "preclinical", "label": "Preclinical" },
+      { "id": "bioinformatics", "label": "Bioinformatics" },
+      { "id": "industry", "label": "Industry" }
+    ],
+    "labels": {
+      "problem": "Problem / Challenge",
+      "method": "Methodology & Role",
+      "impact": "Quantified Impact",
+      "role": "My role",
+      "viewCase": "View case study",
+      "workflow": "Workflow",
+      "ndaBadge": "NDA Project — Metrics within approved ranges",
+      "ndaNote": "This project is covered by a confidentiality agreement. Sponsor, target and compound identities are withheld; all figures are reported as ranges approved for disclosure. Further detail can be discussed under a mutual NDA."
+    },
+    "items": [
+      {
+        "id": "cfdna-methylation-panel",
+        "category": "biomarkers",
+        "year": "2022–2025",
+        "title": "Liquid-biopsy methylation panel for early colorectal cancer detection",
+        "summary": "A 12-marker plasma panel that detects stage I–II disease from a standard blood draw.",
+        "abstract": [
+          { "glyph": "sample", "label": "Plasma cohort" },
+          { "glyph": "dna", "label": "cfDNA methylation" },
+          { "glyph": "chart", "label": "ML classifier" },
+          { "glyph": "target", "label": "12-marker panel" }
+        ],
+        "problem": "Most colorectal cancers in the target population are diagnosed at stage III–IV, and adherence to colonoscopy screening stays below 40%. A blood-based triage test was needed to decide who should be referred first.",
+        "method": "Targeted bisulfite sequencing of cell-free DNA in 412 plasma samples from two hospitals, with a pre-registered case-control design. Candidate regions were ranked by a regularised classifier and locked before testing on a held-out set.",
+        "role": "Scientific lead: study design, wet-lab protocol, analysis plan and supervision of a four-person team.",
+        "impact": "The locked panel reached an AUC of 0.93, with 87% sensitivity at 92% specificity for stage I–II disease. A PCT application was filed and the assay moved to a diagnostics partner for analytical validation.",
+        "metrics": [
+          { "value": "0.93", "label": "AUC, held-out set" },
+          { "value": "87%", "label": "Sensitivity, stage I–II" },
+          { "value": "412", "label": "Plasma samples" }
+        ],
+        "tags": ["cfDNA", "Bisulfite-seq", "ddPCR", "Machine learning", "Clinical cohort"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2025.001",
+          "pdf": "",
+          "code": "https://github.com/",
+          "data": "https://zenodo.org/",
+          "demo": ""
+        }
+      },
+      {
+        "id": "organoid-drug-response",
+        "category": "preclinical",
+        "year": "2021–2024",
+        "title": "Patient-derived organoid platform for drug-response profiling",
+        "summary": "A standardised organoid biobank and assay set that predicts chemotherapy response before treatment.",
+        "abstract": [
+          { "glyph": "clinic", "label": "Tumour biopsy" },
+          { "glyph": "organoid", "label": "Organoid biobank" },
+          { "glyph": "plate", "label": "384-well screen" },
+          { "glyph": "chart", "label": "Response score" }
+        ],
+        "problem": "Two-dimensional cell lines predict clinical response poorly, which contributes to attrition rates above 90% in oncology development. Partners needed a model closer to the patient that could still run at screening throughput.",
+        "method": "Established 38 gastric and colorectal organoid lines with matched clinical data. Viability and high-content imaging assays were standardised in 384-well format under GLP-aligned SOPs, with plate-level quality criteria (Z′ > 0.7).",
+        "role": "Platform owner: protocol development, assay validation, SOP authoring and training of three partner groups.",
+        "impact": "Screening turnaround fell from 6 to 2.5 weeks. In a retrospective set of 22 patients, organoid response agreed with clinical response in 82% of cases. Three external groups adopted the protocol.",
+        "metrics": [
+          { "value": "82%", "label": "Concordance with clinical response" },
+          { "value": "38", "label": "Organoid lines biobanked" },
+          { "value": "−58%", "label": "Screening turnaround" }
+        ],
+        "tags": ["Organoids", "High-content imaging", "384-well assays", "GLP", "SOPs"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2024.002",
+          "pdf": "",
+          "code": "",
+          "data": "https://zenodo.org/",
+          "demo": ""
+        }
+      },
+      {
+        "id": "dengue-severity-signature",
+        "category": "bioinformatics",
+        "year": "2020–2024",
+        "title": "Multi-omics host signature predicting severe dengue",
+        "summary": "An 8-gene signature, measured in the first 72 hours of fever, that flags patients likely to progress.",
+        "abstract": [
+          { "glyph": "sample", "label": "Blood, day 1–3" },
+          { "glyph": "network", "label": "RNA-seq + proteomics" },
+          { "glyph": "chip", "label": "Nextflow pipeline" },
+          { "glyph": "shield", "label": "8-gene signature" }
+        ],
+        "problem": "During outbreaks, clinicians cannot tell early which dengue patients will develop severe disease, so hospitals admit far more people than need care. No validated early predictor was available.",
+        "method": "Integrated whole-blood RNA-seq and targeted plasma proteomics from 186 patients. All steps run in a containerised Nextflow pipeline, and the signature was tested in an independent cohort of 94 patients from a different region.",
+        "role": "Lead analyst and work-package co-lead: analysis strategy, pipeline architecture and external validation.",
+        "impact": "The signature reached an AUC of 0.89 in external validation. The pipeline is open source and has been reused by five laboratories. The signature is the basis for an RT-qPCR prototype now under licence.",
+        "metrics": [
+          { "value": "0.89", "label": "AUC, external validation" },
+          { "value": "186 + 94", "label": "Discovery + validation patients" },
+          { "value": "5", "label": "Labs reusing the pipeline" }
+        ],
+        "tags": ["RNA-seq", "Proteomics", "Nextflow", "R / Bioconductor", "External validation"],
+        "nda": false,
+        "links": {
+          "doi": "https://doi.org/10.5555/kmo.2024.003",
+          "pdf": "",
+          "code": "https://github.com/",
+          "data": "https://www.ncbi.nlm.nih.gov/geo/",
+          "demo": "https://github.com/"
+        }
+      },
+      {
+        "id": "companion-diagnostic-assay",
+        "category": "industry",
+        "year": "2024–2025",
+        "title": "Companion-diagnostic assay for an immuno-oncology asset",
+        "summary": "A stratification assay developed and transferred ahead of a sponsor's Phase II start.",
+        "abstract": [
+          { "glyph": "molecule", "label": "Candidate markers" },
+          { "glyph": "plate", "label": "Assay design (DoE)" },
+          { "glyph": "shield", "label": "Analytical validation" },
+          { "glyph": "clinic", "label": "Transfer to CRO" }
+        ],
+        "problem": "A biopharma sponsor needed a patient-stratification assay in place before starting Phase II, with a fixed regulatory timeline and no validated method available.",
+        "method": "Design-of-experiments optimisation of a multiplex immunoassay under ISO 13485-aligned design control, followed by analytical validation against pre-specified acceptance criteria and a full technology-transfer package.",
+        "role": "Project lead for a six-person cross-functional team, and main scientific contact for the sponsor.",
+        "impact": "All pre-specified acceptance criteria were met, with inter-run variability under 10%. The package was delivered 4–6 weeks ahead of plan and transferred to the sponsor's contract laboratory without re-development.",
+        "metrics": [
+          { "value": "<10%", "label": "Inter-run CV" },
+          { "value": "4–6 wk", "label": "Ahead of schedule" },
+          { "value": "100%", "label": "Acceptance criteria met" }
+        ],
+        "tags": ["Multiplex immunoassay", "DoE", "ISO 13485", "Tech transfer", "Sponsor-facing"],
+        "nda": true,
+        "links": { "doi": "", "pdf": "", "code": "", "data": "", "demo": "" }
+      }
+    ]
+  },
+  "stack": {
+    "eyebrow": "Technical stack",
+    "title": "Experimental and analytical toolkit",
+    "intro": "Years of hands-on use and a self-assessed proficiency level for each method.",
+    "categories": [
+      {
+        "icon": "microscope",
+        "title": "Molecular Biology & In Vitro / In Vivo Assays",
+        "skills": [
+          { "name": "qPCR and digital PCR", "years": 10, "level": 5 },
+          { "name": "Immunoassays (ELISA, multiplex)", "years": 9, "level": 5 },
+          { "name": "Cell culture and 3D organoids", "years": 8, "level": 5 },
+          { "name": "Flow cytometry", "years": 7, "level": 4 },
+          { "name": "CRISPR-Cas9 genome editing", "years": 5, "level": 4 },
+          { "name": "Murine xenograft models", "years": 4, "level": 3 }
+        ]
+      },
+      {
+        "icon": "chart",
+        "title": "Data Analysis & Bioinformatics",
+        "skills": [
+          { "name": "R and Bioconductor", "years": 9, "level": 5 },
+          { "name": "Biostatistics and survival analysis", "years": 8, "level": 4 },
+          { "name": "RNA-seq and single-cell analysis", "years": 7, "level": 4 },
+          { "name": "Python (pandas, scikit-learn)", "years": 6, "level": 4 },
+          { "name": "Nextflow and containerised pipelines", "years": 4, "level": 3 },
+          { "name": "Machine learning for biomarkers", "years": 4, "level": 3 }
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Quality Management & Tech Transfer",
+        "skills": [
+          { "name": "SOP authoring and assay validation", "years": 8, "level": 5 },
+          { "name": "Design of experiments (DoE)", "years": 7, "level": 4 },
+          { "name": "Grant writing and consortium management", "years": 7, "level": 4 },
+          { "name": "Good Laboratory Practice (GLP)", "years": 6, "level": 4 },
+          { "name": "ISO 13485 and ISO 15189", "years": 4, "level": 3 },
+          { "name": "IP strategy and patent drafting", "years": 4, "level": 3 }
+        ]
+      }
+    ]
+  },
+  "ip": {
+    "eyebrow": "Publications & IP",
+    "title": "Patents and transferable assets",
+    "intro": "Protected results with a defined legal status and a clear route to use.",
+    "impactLabel": "Commercial / clinical impact",
+    "items": [
+      {
+        "code": "WO 2025/000000 A1",
+        "status": "PCT published",
+        "statusType": "pending",
+        "year": "2025",
+        "title": "Methylation biomarker panel for early detection of colorectal cancer in plasma",
+        "impact": "In licensing discussion with a diagnostics partner. Supports non-invasive triage ahead of colonoscopy in screening programmes."
+      },
+      {
+        "code": "CO NC2023/0000000",
+        "status": "Granted · Colombia",
+        "statusType": "granted",
+        "year": "2023",
+        "title": "In vitro method for predicting drug response using patient-derived organoids",
+        "impact": "Used by three partner laboratories. Shortens preclinical screening and reduces animal use in early efficacy studies."
+      },
+      {
+        "code": "TT-2024-07",
+        "status": "Licensed know-how",
+        "statusType": "licensed",
+        "year": "2024",
+        "title": "RT-qPCR assay package for an 8-gene dengue severity signature",
+        "impact": "Non-exclusive licence to a regional manufacturer. Enables early hospital triage during outbreaks with standard qPCR equipment."
+      }
+    ]
+  },
+  "publications": {
+    "title": "Curated publications",
+    "intro": "A selection chosen for translational relevance. The complete list is on ORCID and in the academic CV.",
+    "trackLabel": "Research track",
+    "yearLabel": "Year",
+    "allTracks": "All tracks",
+    "allYears": "All years",
+    "tldrLabel": "Executive TL;DR",
+    "tracks": [
+      { "id": "biomarkers", "label": "Biomarkers" },
+      { "id": "models", "label": "Preclinical models" },
+      { "id": "omics", "label": "Multi-omics" }
+    ],
+    "items": [
+      {
+        "year": "2025",
+        "track": "biomarkers",
+        "authorship": "First author",
+        "title": "Plasma cell-free DNA methylation signatures enable early-stage colorectal cancer detection in a Latin American cohort",
+        "authors": "Medina-Ortiz K, Ramírez J, Duarte P, Henao M, Castaño L",
+        "journal": "Clinical Epigenomics Reports",
+        "tldr": "A blood test based on 12 DNA marks detects early colorectal cancer with accuracy close to current screening tools. It could prioritise who needs a colonoscopy.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "https://zenodo.org/", "doi": "https://doi.org/10.5555/kmo.2025.001" }
+      },
+      {
+        "year": "2024",
+        "track": "omics",
+        "authorship": "Co-first author",
+        "title": "An integrated transcriptomic and proteomic signature predicts progression to severe dengue",
+        "authors": "Medina-Ortiz K*, Salazar A*, Okafor N, Vélez D, Brandt H",
+        "journal": "Journal of Translational Infection",
+        "tldr": "Eight genes measured in the first three days of fever identify patients at risk of severe dengue. Validated in an independent cohort from another region.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "https://www.ncbi.nlm.nih.gov/geo/", "doi": "https://doi.org/10.5555/kmo.2024.003" }
+      },
+      {
+        "year": "2024",
+        "track": "models",
+        "authorship": "First author",
+        "title": "Standardised patient-derived organoid assays predict chemotherapy response in gastric cancer",
+        "authors": "Medina-Ortiz K, Lemaire C, Pardo S, Giraldo F, Castaño L",
+        "journal": "Precision Oncology Methods",
+        "tldr": "Mini-tumours grown from patient biopsies responded to drugs the same way the patients did in 82% of cases. The protocol runs at screening scale.",
+        "links": { "pdf": "", "code": "", "data": "https://zenodo.org/", "doi": "https://doi.org/10.5555/kmo.2024.002" }
+      },
+      {
+        "year": "2023",
+        "track": "omics",
+        "authorship": "Corresponding author",
+        "title": "A reproducible Nextflow workflow for multi-omics integration in small clinical cohorts",
+        "authors": "Salazar A, Brandt H, Medina-Ortiz K",
+        "journal": "Bioinformatics Tools and Protocols",
+        "tldr": "An open-source pipeline that lets small clinical teams combine several data types reliably. Results can be re-run and audited by a third party.",
+        "links": { "pdf": "", "code": "https://github.com/", "data": "", "doi": "https://doi.org/10.5555/kmo.2023.004" }
+      },
+      {
+        "year": "2022",
+        "track": "biomarkers",
+        "authorship": "First author",
+        "title": "Circulating microRNA profiles as minimally invasive markers of treatment response in gastric cancer",
+        "authors": "Medina-Ortiz K, Henao M, Duarte P, Castaño L",
+        "journal": "Molecular Diagnostics Letters",
+        "tldr": "Small RNA molecules in blood shift within weeks when chemotherapy is working. They offer an earlier signal than imaging for adjusting treatment.",
+        "links": { "pdf": "", "code": "", "data": "", "doi": "https://doi.org/10.5555/kmo.2022.005" }
+      },
+      {
+        "year": "2021",
+        "track": "models",
+        "authorship": "Co-author (3 of 9)",
+        "title": "Tumour–stroma crosstalk shapes drug tolerance in three-dimensional co-culture models",
+        "authors": "Lemaire C, Pardo S, Medina-Ortiz K, et al.",
+        "journal": "Cell Models in Disease",
+        "tldr": "Supporting cells around a tumour help it tolerate drugs. Including them in lab models gives a more realistic picture of drug efficacy.",
+        "links": { "pdf": "", "code": "", "data": "", "doi": "https://doi.org/10.5555/kmo.2021.006" }
+      }
+    ]
+  },
+  "career": {
+    "eyebrow": "Career",
+    "title": "Experience and education",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "items": [
+      {
+        "period": "2023 — Present",
+        "role": "Postdoctoral Researcher, Translational Oncology",
+        "org": "Andean Institute of Biomedicine",
+        "summary": "Lead the liquid-biopsy programme and its transfer to a diagnostics partner. Co-investigator on two competitive grants; supervise four researchers."
+      },
+      {
+        "period": "2019 — 2023",
+        "role": "PhD Researcher, Biomedical Sciences",
+        "org": "Translational Oncology Unit",
+        "summary": "Built the patient-derived organoid platform and its validated assay set. Thesis awarded with highest distinction."
+      },
+      {
+        "period": "2016 — 2019",
+        "role": "Research Associate, Molecular Diagnostics",
+        "org": "Tropical Disease Consortium",
+        "summary": "Developed and validated qPCR-based assays for infectious disease surveillance under an ISO 15189 quality system."
+      }
+    ],
+    "education": [
+      { "year": "2023", "degree": "PhD in Biomedical Sciences", "org": "Translational Oncology Unit" },
+      { "year": "2018", "degree": "MSc in Molecular Biology and Biotechnology", "org": "Andean Institute of Biomedicine" },
+      { "year": "2015", "degree": "BSc in Biology", "org": "Colombia" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A scientist who builds things other teams can use",
+    "bio": [
+      "I trained as a biologist in Colombia and completed a PhD in Biomedical Sciences focused on translational oncology. My work sits between discovery and development: finding signals in patient samples, proving they hold up, and packaging them so a partner can take them further.",
+      "I work in English, Spanish and French, and I am comfortable presenting to clinicians, investors and regulators as well as to other scientists."
+    ],
+    "now": {
+      "title": "Now",
+      "updated": "2026-11-01",
+      "items": [
+        "Running the analytical validation of the methylation panel with a diagnostics partner.",
+        "Writing a consortium proposal on organoid-based drug-response testing.",
+        "Exploring principal scientist and R&D lead roles in biopharma and diagnostics for 2027."
+      ]
+    }
+  },
+  "cv": {
+    "eyebrow": "Curriculum",
+    "title": "Two CVs, for two kinds of reader",
+    "items": [
+      {
+        "icon": "briefcase",
+        "title": "Corporate / Industry Resume",
+        "description": "Outcomes, skills and leadership on one to two pages, in an ATS-friendly format.",
+        "meta": "PDF · 1–2 pages",
+        "file": "assets/cv-industria-katherine-medina.pdf",
+        "cta": "Download resume"
+      },
+      {
+        "icon": "scholar",
+        "title": "Full Academic CV",
+        "description": "Complete record of publications, grants, teaching, supervision and conference contributions.",
+        "meta": "PDF · Full record",
+        "file": "assets/cv-academico-katherine-medina.pdf",
+        "cta": "Download academic CV"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's discuss your R&D challenge",
+    "intro": "I usually reply within two working days.",
+    "availabilityLabel": "Available for",
+    "availability": [
+      {
+        "icon": "briefcase",
+        "title": "R&D Leadership / Principal Scientist Roles",
+        "description": "Translational research, biomarker and assay development teams in biopharma and diagnostics."
+      },
+      {
+        "icon": "consulting",
+        "title": "Scientific Consulting",
+        "description": "Study design, assay validation strategy, data analysis review and technical due diligence."
+      },
+      {
+        "icon": "consortium",
+        "title": "Joint Consortia & Grants",
+        "description": "Work-package leadership and co-application in national and international funding calls."
+      }
+    ],
+    "emailLabel": "Direct email",
+    "form": {
+      "endpoint": "",
+      "accessKey": "",
+      "title": "Send a message",
+      "name": "Name",
+      "email": "Work email",
+      "organization": "Organisation",
+      "topic": "Topic",
+      "topics": ["R&D role", "Consulting", "Consortium or grant", "Other"],
+      "message": "Message",
+      "messagePlaceholder": "A few lines about your project, timeline and what you need.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent. Thank you — I will reply shortly.",
+      "error": "The message could not be sent. Please use the email address instead.",
+      "privacy": "Your details are used only to reply to this message."
+    }
+  },
+  "footer": {
+    "tagline": "Translational biomedical R&D",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,89 @@
+---
+import Icon from './Icon.astro';
+import LangSwitcher from './LangSwitcher.astro';
+import { url, type Content } from '../i18n';
+
+interface Props {
+  lang: string;
+  t: Content;
+}
+const { lang, t } = Astro.props;
+---
+
+<header class="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur-md">
+  <div class="container-page flex h-16 items-center gap-3">
+    <a href={url(`${lang}/`)} class="mr-auto whitespace-nowrap font-display text-[15px] font-bold tracking-tight text-ink">
+      {t.site.name}<span class="font-mono text-xs font-medium text-accent-text">, {t.site.credential}</span>
+    </a>
+
+    <nav aria-label={t.ui.mainNav} class="hidden lg:block">
+      <ul class="m-0 flex list-none items-center gap-1 p-0">
+        {
+          t.nav.links.map((link) => (
+            <li>
+              <a
+                href={`#${link.id}`}
+                data-nav-link={link.id}
+                class="rounded-full px-3 py-2 text-[13px] font-medium text-muted transition-colors hover:text-ink aria-[current=true]:text-accent-text"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="hidden sm:block">
+      <LangSwitcher lang={lang} t={t} />
+    </div>
+
+    <button
+      type="button"
+      data-theme-toggle
+      aria-label={t.ui.themeToggle}
+      title={t.ui.themeToggle}
+      class="grid size-9 cursor-pointer place-items-center rounded-full border border-line bg-surface text-muted transition-colors hover:text-ink"
+    >
+      <Icon name="moon" class="size-4 dark:hidden" />
+      <Icon name="sun" class="hidden size-4 dark:block" />
+    </button>
+
+    <a href={url(t.nav.cta.href)} class="btn btn-primary hidden !px-4 !py-2 text-[13px] md:inline-flex">
+      <Icon name="download" class="size-4" />
+      {t.nav.cta.label}
+    </a>
+
+    <details data-mobile-menu class="group lg:hidden">
+      <summary
+        aria-label={t.ui.menu}
+        class="grid size-9 cursor-pointer list-none place-items-center rounded-full border border-line bg-surface text-ink [&::-webkit-details-marker]:hidden"
+      >
+        <Icon name="menu" class="size-4 group-open:hidden" />
+        <Icon name="close" class="hidden size-4 group-open:block" />
+      </summary>
+      <div class="absolute inset-x-0 top-16 border-b border-line bg-surface-solid shadow-lg">
+        <nav aria-label={t.ui.menu} class="container-page py-4">
+          <ul class="m-0 list-none p-0">
+            {
+              t.nav.links.map((link) => (
+                <li>
+                  <a href={`#${link.id}`} class="block border-b border-line py-3 text-base font-medium text-ink">
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="mt-4 flex items-center justify-between gap-3">
+            <LangSwitcher lang={lang} t={t} />
+            <a href={url(t.nav.cta.href)} class="btn btn-primary !px-4 !py-2 text-[13px]">
+              <Icon name="download" class="size-4" />
+              {t.nav.cta.label}
+            </a>
+          </div>
+        </nav>
+      </div>
+    </details>
+  </div>
+</header>
